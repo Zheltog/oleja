@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class CamVerRot : MonoBehaviour
 {
-    public float sen = 1;
-    public float min = -5;
-    public float max = 10;
+    public float sen = 7;
+    public float min = -60;
+    public float max = 80;
     
     private float _rotX;
 
