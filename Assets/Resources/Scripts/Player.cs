@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Char : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 3.0f;
     public float rotHorSen = 7;

@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 921996679}
   - component: {fileID: 921996678}
   - component: {fileID: 921996682}
+  - component: {fileID: 921996683}
   m_Layer: 0
   m_Name: Oleja
   m_TagString: Untagged
@@ -696,7 +697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921996677}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4, z: 20}
+  m_LocalPosition: {x: 0, y: 1.4, z: -15}
   m_LocalScale: {x: 0.45, y: 1.8, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -717,6 +718,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   obstacleRange: 5
+--- !u!114 &921996683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921996677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81677ec6380270439cc0b1a6b7a699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 10
+  angle: 30
+  playerRef: {fileID: 1116414899}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 2147483648
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  canSeePlayer: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +854,7 @@ GameObject:
   - component: {fileID: 1116414902}
   - component: {fileID: 1116414901}
   - component: {fileID: 1116414900}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
