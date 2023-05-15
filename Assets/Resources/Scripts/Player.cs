@@ -6,11 +6,14 @@ public class Player : MonoBehaviour
     public float rotHorSen = 7;
 
     private Rigidbody _rigidbody;
+    private Light _flashlight;
     private float _rotY;
+    private bool _isFlashlightOn = true;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _flashlight = GetComponentInChildren<Light>();
     }
 
     private void Update()
@@ -25,6 +28,17 @@ public class Player : MonoBehaviour
         _rigidbody.MovePosition(_rigidbody.position + movement);
         
         _rotY += Input.GetAxis("Mouse X") * rotHorSen;
-        transform.localEulerAngles = new Vector3(0, _rotY, 0); 
+        transform.localEulerAngles = new Vector3(0, _rotY, 0);
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SwitchFlashlight();
+        }
+    }
+
+    private void SwitchFlashlight()
+    {
+        _isFlashlightOn = !_isFlashlightOn;
+        _flashlight.enabled = _isFlashlightOn;
     }
 }
