@@ -7,13 +7,13 @@ public static class TipControllerProxy
         _controller = controller;
     }
     
-    public static void ShowTipForCollectable(string itemName)
+    public static void ShowTip(TipType type, string initiatorName)
     {
-        _controller.ShowTipForCollectable(itemName);
+        _controller.ShowTip(type, initiatorName);
     }
 
-    public static void HideTipForCollectable(string itemName)
+    public static void HideTip(string initiatorName)
     {
-        _controller.HideTipForCollectable(itemName);
+        _controller.HideTip(initiatorName);
     }
 }

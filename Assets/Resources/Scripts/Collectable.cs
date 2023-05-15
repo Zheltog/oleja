@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour
             if (_isAvailable)
             {
                 _isAvailable = false;
-                TipControllerProxy.HideTipForCollectable(itemName);
+                TipControllerProxy.HideTip(itemName);
             }
             return;
         }
@@ -33,7 +33,7 @@ public class Collectable : MonoBehaviour
             if (_isAvailable)
             {
                 _isAvailable = false;
-                TipControllerProxy.HideTipForCollectable(itemName);
+                TipControllerProxy.HideTip(itemName);
             }
             return;
         }
@@ -43,13 +43,14 @@ public class Collectable : MonoBehaviour
         if (!_isAvailable)
         {
             _isAvailable = true;
-            TipControllerProxy.ShowTipForCollectable(itemName);
+            TipControllerProxy.ShowTip(TipType.Collect, itemName);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log(itemName + " taken");
-            TipControllerProxy.HideTipForCollectable(itemName);
+            ItemsControllerProxy.AddItem(itemName);
+            TipControllerProxy.HideTip(itemName);
             Destroy(gameObject);
         }
     }
