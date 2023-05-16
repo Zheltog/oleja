@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Oleja : MonoBehaviour
 {
-    public Transform player;
+    public Transform playerHead;
+    public Transform playerMain;
     public float calmSpeed = 1.0f;
     public float runningSpeed = 5.0f;
     public float obstacleCheckRange = 5.0f;
@@ -27,7 +28,7 @@ public class Oleja : MonoBehaviour
     private void PursuePlayer()
     {
         Debug.Log("I C U");
-        transform.LookAt(player);
+        transform.LookAt(playerMain);
         transform.Translate(0, 0, runningSpeed * Time.deltaTime);
     }
 
@@ -55,13 +56,13 @@ public class Oleja : MonoBehaviour
     {
         var t = transform;
         var forwardDirection = t.forward;
-        var directionToTarget = player.position - t.position;
+        var directionToTarget = playerHead.position - t.position;
         return Vector3.Angle(forwardDirection, directionToTarget) < fovAngle / 2;
     }
 
     private bool IsPlayerBehindObstacle()
     {
-        var direction = player.position - transform.position;
+        var direction = playerHead.position - transform.position;
         var raycastDistance = direction.magnitude < fovDistance ? direction.magnitude : fovDistance;
         var ray = new Ray(transform.position, direction.normalized);
         var hits = Physics.RaycastAll(ray, raycastDistance);
