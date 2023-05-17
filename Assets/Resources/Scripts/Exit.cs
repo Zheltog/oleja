@@ -7,14 +7,8 @@ public class Exit : MonoBehaviour
     public float maxActionDistance = 1f;
     public Transform player;
     
-    private Renderer _renderer;
     private bool _isAvailable;
 
-    private void Start()
-    {
-        _renderer = GetComponent<Renderer>();
-    }
-    
     private void Update()
     {
         var distanceToPlayer = Vector3.Distance(transform.position, player.position);
@@ -29,7 +23,7 @@ public class Exit : MonoBehaviour
             return;
         }
 
-        if (!_renderer.isVisible)
+        if (!IsInPlayerFov())
         {
             if (_isAvailable)
             {
@@ -38,8 +32,6 @@ public class Exit : MonoBehaviour
             }
             return;
         }
-        
-        // TODO: 'visible' even behind obstacles
 
         var mayLeave = MayLeave();
         
@@ -55,6 +47,14 @@ public class Exit : MonoBehaviour
             TipControllerProxy.HideTip(gameObject.name);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
+    }
+
+    private bool IsInPlayerFov()
+    {
+        var pt = player.transform;
+        var playerForward = pt.forward;
+        var directionToMe = transform.position - pt.position;
+        return Vector3.Angle(playerForward, directionToMe) < 60 / 2;    // TODO
     }
 
     private bool MayLeave()

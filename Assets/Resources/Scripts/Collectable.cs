@@ -6,13 +6,7 @@ public class Collectable : MonoBehaviour
     public float maxTakingDistance = 1f;
     public Transform player;
 
-    private Renderer _renderer;
     private bool _isAvailable;
-
-    private void Start()
-    {
-        _renderer = GetComponent<Renderer>();
-    }
 
     private void Update()
     {
@@ -28,7 +22,7 @@ public class Collectable : MonoBehaviour
             return;
         }
 
-        if (!_renderer.isVisible)
+        if (!IsInPlayerFov())
         {
             if (_isAvailable)
             {
@@ -37,8 +31,6 @@ public class Collectable : MonoBehaviour
             }
             return;
         }
-        
-        // TODO: 'visible' even behind obstacles
 
         if (!_isAvailable)
         {
@@ -53,5 +45,13 @@ public class Collectable : MonoBehaviour
             TipControllerProxy.HideTip(itemName);
             Destroy(gameObject);
         }
+    }
+    
+    private bool IsInPlayerFov()
+    {
+        var pt = player.transform;
+        var playerForward = pt.forward;
+        var directionToMe = transform.position - pt.position;
+        return Vector3.Angle(playerForward, directionToMe) < 60 / 2;    // TODO
     }
 }
