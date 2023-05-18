@@ -31,12 +31,6 @@ public abstract class Item : MonoBehaviour
             return;
         }
 
-        if (requiresItemForInteraction && !CollectingControllerProxy.IsCollected(requiredItemName))
-        {
-            ResetIsAvailable();
-            return;
-        }
-
         if (!_isAvailable)
         {
             _isAvailable = true;
@@ -45,6 +39,10 @@ public abstract class Item : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (requiresItemForInteraction && !CollectingControllerProxy.IsCollected(requiredItemName))
+            {
+                return;
+            }
             _isInteracted = true;
             TipControllerProxy.HideTip(itemName);
             Interact();

@@ -6,6 +6,7 @@ public class Collectable : Item
     {
         Debug.Log(itemName + " taken");
         CollectingControllerProxy.AddItem(itemName);
+        PhaseControllerProxy.NextPhase();
         Destroy(gameObject);
     }
 }
