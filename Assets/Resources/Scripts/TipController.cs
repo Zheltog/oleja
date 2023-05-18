@@ -12,7 +12,7 @@ public class TipController: MonoBehaviour
         TipControllerProxy.Initialize(this);
     }
 
-    public void ShowTip(TipType type, string initiatorName)
+    public void ShowTip(string initiatorName)
     {
         if (_currentInitiator == initiatorName)
         {
@@ -21,18 +21,18 @@ public class TipController: MonoBehaviour
         
         _currentInitiator = initiatorName;
 
-        switch (type)
-        {
-            case TipType.Collect:
-                tipText.text = "Press [E] to take '" + initiatorName + "'";
-                break;
-            case TipType.ExitUnavailable:
-                tipText.text = "It's locked...";
-                break;
-            case TipType.ExitAvailable:
-                tipText.text = "Press [E] to get outta here!";
-                break;
-        }
+        // switch (type)
+        // {
+        //     case TipType.Collect:
+        //         tipText.text = "Press [E] to take '" + initiatorName + "'";
+        //         break;
+        //     case TipType.ExitUnavailable:
+        //         tipText.text = "It's locked...";
+        //         break;
+        //     case TipType.ExitAvailable:
+        //         tipText.text = "Press [E] to get outta here!";
+        //         break;
+        // }
     }
 
     public void HideTip(string itemName)

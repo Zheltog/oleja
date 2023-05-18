@@ -7,9 +7,9 @@ public static class TipControllerProxy
         _controller = controller;
     }
     
-    public static void ShowTip(TipType type, string initiatorName)
+    public static void ShowTip(string initiatorName)
     {
-        _controller.ShowTip(type, initiatorName);
+        _controller.ShowTip(initiatorName);
     }
 
     public static void HideTip(string initiatorName)
