@@ -25,8 +25,8 @@ public class TipController: MonoBehaviour
 
         switch (initiatorName)
         {
-            case "Keys":
-                tipText.text = "[E] Take the keys";
+            case "Clipboard":
+                tipText.text = "[E] Read the note";
                 break;
             case "Crowbar":
                 if (currentPhase == Phase.Exploring)

@@ -1,0 +1,69 @@
+using UnityEngine;
+
+public abstract class Item : MonoBehaviour
+{
+    public float maxInteractionDistance = 1f;
+    public bool requiresItemForInteraction;
+    public string requiredItemName;
+    public float playerFOV = 60f;   // TODO
+    public Transform player;
+    
+    private bool _isAvailable;
+    private bool _isInteracted;
+
+    private void Update()
+    {
+        if (_isInteracted)
+        {
+            return;
+        }
+
+        if (Vector3.Distance(transform.position, player.position) > maxInteractionDistance)
+        {
+            ResetIsAvailable();
+            return;
+        }
+
+        if (!IsInPlayerFov())
+        {
+            ResetIsAvailable();
+            return;
+        }
+
+        if (!_isAvailable)
+        {
+            _isAvailable = true;
+            TipControllerProxy.ShowTip(gameObject.name);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (requiresItemForInteraction && !CollectingControllerProxy.IsCollected(requiredItemName))
+            {
+                return;
+            }
+            _isInteracted = true;
+            TipControllerProxy.HideTip(gameObject.name);
+            Interact();
+        }
+    }
+
+    private bool IsInPlayerFov()
+    {
+        var pt = player.transform;
+        var playerForward = pt.forward;
+        var directionToItem = transform.position - pt.position;
+        return Vector3.Angle(playerForward, directionToItem) < playerFOV / 2;
+    }
+
+    private void ResetIsAvailable()
+    {
+        if (_isAvailable)
+        {
+            _isAvailable = false;
+            TipControllerProxy.HideTip(gameObject.name);
+        }
+    }
+    
+    protected abstract void Interact();
+}
