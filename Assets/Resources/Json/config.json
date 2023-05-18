@@ -1,0 +1,38 @@
+{
+  "tips": {
+    "closeReading": "[Esc] Закрыть",
+    "itemTips": [
+      {
+        "itemName": "Clipboard",
+        "tipsForPhases": [
+          {
+            "phase": "Entering",
+            "tip": "[E] Прочитать"
+          }
+        ]
+      },
+      {
+        "itemName": "Crowbar",
+        "tipsForPhases": [
+          {
+            "phase": "Exploring",
+            "tip": "[E] Взять лом"
+          }
+        ]
+      },
+      {
+        "itemName": "Padlock",
+        "tipsForPhases": [
+          {
+            "phase": "Exploring",
+            "tip": "Тут замок..."
+          },
+          {
+            "phase": "Escaping",
+            "tip": "[E] Выломать замок"
+          }
+        ]
+      }
+    ]
+  }
+}

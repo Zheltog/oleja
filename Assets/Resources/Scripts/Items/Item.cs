@@ -33,7 +33,7 @@ public abstract class Item : MonoBehaviour
         if (!_isAvailable)
         {
             _isAvailable = true;
-            TipControllerProxy.ShowTip(gameObject.name);
+            TextControllerProxy.ShowTip(gameObject.name);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -43,7 +43,7 @@ public abstract class Item : MonoBehaviour
                 return;
             }
             _isInteracted = true;
-            TipControllerProxy.HideTip(gameObject.name);
+            TextControllerProxy.HideTip(gameObject.name);
             Interact();
         }
     }
@@ -61,7 +61,7 @@ public abstract class Item : MonoBehaviour
         if (_isAvailable)
         {
             _isAvailable = false;
-            TipControllerProxy.HideTip(gameObject.name);
+            TextControllerProxy.HideTip(gameObject.name);
         }
     }
     
