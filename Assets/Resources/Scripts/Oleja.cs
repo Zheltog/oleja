@@ -84,4 +84,12 @@ public class Oleja : MonoBehaviour
 
         return false;
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.TryGetComponent<Player>(out Player _))
+        {
+            SceneController.LoadGameOver();
+        }
+    }
 }
