@@ -5,6 +5,14 @@ using System.Collections.Generic;
 public class Config
 {
     public Tips tips;
+    public List<ItemText> texts;
+
+    [Serializable]
+    public class ItemText
+    {
+        public string itemName;
+        public string text;
+    }
     
     [Serializable]
     public class Tips

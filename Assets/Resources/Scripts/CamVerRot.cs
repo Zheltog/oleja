@@ -10,6 +10,12 @@ public class CamVerRot : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale < 1)
+        {
+            return;
+            // TODO: ?
+        }
+        
         _rotX -= Input.GetAxis("Mouse Y") * sen;
         _rotX = Mathf.Clamp(_rotX, min, max);
         transform.localEulerAngles = new Vector3(_rotX, 0, 0); 

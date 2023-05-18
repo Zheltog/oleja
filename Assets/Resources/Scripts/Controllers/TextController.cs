@@ -63,7 +63,7 @@ public class TextController: MonoBehaviour
     {
         Time.timeScale = 0;
         readingPanel.SetActive(true);
-        readingText.text = itemName;
+        readingText.text = _config.texts.Find(itemText => itemText.itemName == itemName).text;
         _isReading = true;
     }
 

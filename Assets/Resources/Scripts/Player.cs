@@ -28,6 +28,12 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale < 1)
+        {
+            return;
+            // TODO: ?
+        }
+        
         var deltaZ = Input.GetAxis("Vertical") * _currentSpeed;
         var deltaX = Input.GetAxis("Horizontal") * _currentSpeed;
 

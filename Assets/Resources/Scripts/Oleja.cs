@@ -13,8 +13,22 @@ public class Oleja : MonoBehaviour
     public float fovAngle = 60f;
     public float fovDistance = 10f;
 
+    private bool _isAwake;
+    private GameObject _visible;
+
+    private void Start()
+    {
+        _visible = transform.GetChild(0).gameObject;
+        _visible.SetActive(false);
+    }
+
     private void Update()
     {
+        if (!_isAwake)
+        {
+            return;
+        }
+        
         if (IsPlayerInFOV() && !IsPlayerBehindObstacle())
         {
             PursuePlayer();
@@ -23,6 +37,12 @@ public class Oleja : MonoBehaviour
         {
             SearchForPlayer();
         }
+    }
+
+    public void AwakeOleja()
+    {
+        _isAwake = true;
+        _visible.SetActive(true);
     }
     
     private void PursuePlayer()
