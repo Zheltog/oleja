@@ -4,7 +4,7 @@ namespace Garden
 {
     public class MainController: MonoBehaviour
     {
-        public string configFileName = "Json/config";
+        public string configFileName = "Json/garden";
     
         private void Awake()
         {

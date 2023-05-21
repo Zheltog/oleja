@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Garden
 {
-    public class ConfigManager
+    public static class ConfigManager
     {
         private static Config _config;
         
