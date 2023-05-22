@@ -7,6 +7,7 @@ namespace Room
 {
     public class TextController : MonoBehaviour
     {
+        public GameObject panel;
         public TextMeshProUGUI textBox;
         public float secondsBeforeNextSymbol = 0.075f;
         public float delayMultiplier = 5;
@@ -28,6 +29,11 @@ namespace Room
 
         private void Update()
         {
+            if (!panel.activeSelf)
+            {
+                return;
+            }
+            
             if (!Input.anyKeyDown ||
                 Input.GetMouseButtonDown(0) ||
                 Input.GetMouseButtonDown(1) ||
