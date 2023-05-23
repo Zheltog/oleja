@@ -3,7 +3,7 @@
     "closeReading": "[Esc] Закрыть",
     "itemTips": [
       {
-        "itemName": "Clipboard",
+        "itemName": "Notebook",
         "tipsForPhases": [
           {
             "phase": "Entering",
@@ -45,17 +45,34 @@
             "tip": "[E] Взять студенческий билет"
           }
         ]
+      },
+      {
+        "itemName": "Newspaper",
+        "tipsForPhases": [
+          {
+            "phase": "Exploring",
+            "tip": "[E] Посмотреть газеты"
+          },
+          {
+            "phase": "Escaping",
+            "tip": "[E] Посмотреть газеты"
+          }
+        ]
       }
     ]
   },
   "texts": [
     {
-      "itemName": "Clipboard",
+      "itemName": "Notebook",
       "text": "ЗАБОРИ\n\nМ\nЕ\nН\nЯ\n\n(ОЛЕЖА)"
     },
     {
       "itemName": "StudentID",
       "text": "Студенческий билет\nСушкин Олег Ильич\nЮжно-Уральский политехнический колледж\nФрезеровщик\nНет отметки за последний курс\nПросрочен"
+    },
+    {
+      "itemName": "Newspaper",
+      "text": "Несколько свежих газет\nВ одной из них моё объявление с номером телефона"
     }
   ]
 }
