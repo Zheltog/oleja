@@ -10,6 +10,11 @@ namespace Menu
             SceneController.LoadRoomStart();
         }
 
+        public void Credits()
+        {
+            SceneController.LoadCredits();
+        }
+
         public void Exit()
         {
             Application.Quit();

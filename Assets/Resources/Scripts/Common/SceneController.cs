@@ -8,6 +8,11 @@ namespace Common
         {
             SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         }
+
+        public static void LoadCredits()
+        {
+            SceneManager.LoadScene("Credits", LoadSceneMode.Single);
+        }
         
         public static void LoadRoomStart()
         {
