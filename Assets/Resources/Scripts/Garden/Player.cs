@@ -25,6 +25,7 @@ namespace Garden
             _rigidbody = GetComponent<Rigidbody>();
             _flashlight = GetComponentInChildren<Light>();
             _headMaxY = head.transform.localPosition.y;
+            _currentRotY = transform.rotation.eulerAngles.y;
             _currentSpeed = calmSpeed;
         }
 
