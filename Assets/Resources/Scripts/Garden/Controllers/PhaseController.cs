@@ -1,3 +1,4 @@
+using Common;
 using UnityEngine;
 
 namespace Garden
@@ -27,7 +28,7 @@ namespace Garden
                     _currentPhase = Phase.Escaping;
                     return;
                 case Phase.Escaping:
-                    SceneController.LoadNext();
+                    SceneController.LoadRoomFinish();
                     return;
             }
         }
