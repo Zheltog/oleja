@@ -18,13 +18,16 @@ namespace Garden
 
         private bool _isAwake;
         private GameObject _visible;
+        private Rigidbody _rigidbody;
         private BoxCollider _collider;
 
         private void Start()
         {
             _visible = transform.GetChild(0).gameObject;
+            _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<BoxCollider>();
             _visible.SetActive(false);
+            _rigidbody.useGravity = false;
             _collider.enabled = false;
         }
 
@@ -50,6 +53,7 @@ namespace Garden
             _isAwake = true;
             _visible.SetActive(true);
             _collider.enabled = true;
+            _rigidbody.useGravity = true;
         }
 
         private void PursuePlayer()
