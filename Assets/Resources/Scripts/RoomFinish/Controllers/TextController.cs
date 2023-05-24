@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using Common;
-using TMPro;
+using RoomCommon;
 using UnityEngine;
 
 namespace RoomFinish
@@ -9,23 +7,14 @@ namespace RoomFinish
     public class TextController : MonoBehaviour
     {
         public GameObject panel;
-        public TextMeshProUGUI textBox;
-        public float secondsBeforeNextSymbol = 0.075f;
-        public float delayMultiplier = 5;
-        public float pitchRangeMin = 0.7f;
-        public float pitchRangeMax = 0.8f;
 
-        private AudioController _audio;
-        private List<string> _forumMessageLines;
-        private string _currentText = "";
-        private int _currentLineIndex;
-        private bool _isPrinting;
+        private TextPrinter _printer;
 
         private void Start()
         {
             var config = ConfigProvider<Config>.GetConfig();
-            _forumMessageLines = config.forumMessageLines;
-            _audio = GetComponent<AudioController>();
+            _printer = GetComponent<TextPrinter>();
+            _printer.Init(config.forumMessageLines);
         }
 
         private void Update()
@@ -43,53 +32,29 @@ namespace RoomFinish
                 return;
             }
 
-            if (_isPrinting)
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                OnPrintCompleted();
+                return;
+            }
+
+            if (_printer.IsPrinting)
             {
                 return;
             }
 
-            if (_currentLineIndex == _forumMessageLines.Count)
+            if (_printer.IsCompleted)
             {
-                SceneLoader.LoadGameOver();
+                OnPrintCompleted();
                 return;
             }
 
-            StartCoroutine(PrintNextLine());
+            StartCoroutine(_printer.PrintNextLine());
         }
 
-        private IEnumerator PrintNextLine()
+        private void OnPrintCompleted()
         {
-            _isPrinting = true;
-
-            var chars = _forumMessageLines[_currentLineIndex].ToCharArray();
-            var prevChar = ' ';
-
-            foreach (var currentChar in chars)
-            {
-                yield return new WaitForSeconds(GetDelay(prevChar, currentChar));
-
-                if (!char.IsWhiteSpace(currentChar))
-                {
-                    _audio.PlayTextSound(pitchRangeMin, pitchRangeMax);
-                }
-
-                _currentText += currentChar;
-                textBox.text = _currentText;
-                prevChar = currentChar;
-            }
-
-            _currentLineIndex++;
-            _isPrinting = false;
-        }
-        
-        private float GetDelay(char prevChar, char nextChar)
-        {
-            if (char.IsPunctuation(prevChar) || nextChar == '\n')
-            {
-                return secondsBeforeNextSymbol * delayMultiplier;
-            }
-
-            return secondsBeforeNextSymbol;
+            SceneLoader.LoadGameOver();
         }
     }
 }

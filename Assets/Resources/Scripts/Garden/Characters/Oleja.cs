@@ -50,7 +50,7 @@ namespace Garden
 
         private void PursuePlayer()
         {
-            Debug.Log("I C U");
+            // Debug.Log("I C U");
             transform.LookAt(playerMain);
             transform.Translate(0, 0, runningSpeed * Time.deltaTime);
         }

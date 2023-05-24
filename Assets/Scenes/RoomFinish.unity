@@ -41990,9 +41990,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150131572}
-  - component: {fileID: 1150131575}
   - component: {fileID: 1150131574}
   - component: {fileID: 1150131573}
+  - component: {fileID: 1150131576}
+  - component: {fileID: 1150131575}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -42028,11 +42029,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 822269726}
-  textBox: {fileID: 1277270147}
-  secondsBeforeNextSymbol: 0.05
-  delayMultiplier: 5
-  pitchRangeMin: 0.7
-  pitchRangeMax: 0.8
 --- !u!114 &1150131574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42055,11 +42051,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1150131571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 150f56b65e164edc92f1fdcdc0de552f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b4d7566203a41ce865dfd67f48032b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1277270147}
+  secondsBeforeNextSymbol: 0.075
+  delayMultiplier: 5
+--- !u!114 &1150131576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150131571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cf2afcd40c429ea89c29d7ab7df7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textSoundSource: {fileID: 2053893572}
   textSoundClipPath: Audio/typewriter_key_press
+  pitchRangeMin: 0.7
+  pitchRangeMax: 0.8
 --- !u!1 &1159775184
 GameObject:
   m_ObjectHideFlags: 0
