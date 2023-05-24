@@ -15,7 +15,7 @@ namespace Garden
         private Light _flashlight;
         private float _currentRotY;
         private float _headMaxY;
-        private bool _isFlashlightOn;
+        private bool _isFlashlightOn = true;
         private bool _isSquatting;
         private bool _isRunning;
         private float _currentSpeed;

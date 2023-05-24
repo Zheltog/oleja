@@ -18,11 +18,14 @@ namespace Garden
 
         private bool _isAwake;
         private GameObject _visible;
+        private BoxCollider _collider;
 
         private void Start()
         {
             _visible = transform.GetChild(0).gameObject;
+            _collider = GetComponent<BoxCollider>();
             _visible.SetActive(false);
+            _collider.enabled = false;
         }
 
         private void Update()
@@ -46,6 +49,7 @@ namespace Garden
         {
             _isAwake = true;
             _visible.SetActive(true);
+            _collider.enabled = true;
         }
 
         private void PursuePlayer()
