@@ -6,6 +6,6 @@ namespace RoomStart
     [Serializable]
     public class Config
     {
-        public List<string> textLines;
+        public List<string> forumMessageLines;
     }
 }

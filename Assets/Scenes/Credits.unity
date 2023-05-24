@@ -7190,7 +7190,7 @@ GameObject:
   - component: {fileID: 825064919}
   - component: {fileID: 825064918}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10497,7 +10497,7 @@ GameObject:
   - component: {fileID: 1173998943}
   - component: {fileID: 1173998942}
   m_Layer: 5
-  m_Name: Main
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12325,7 +12325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsBeforeNextLine: 5
-  textBox: {fileID: 1173998942}
+  creditsTextBox: {fileID: 1173998942}
   menuButtonTextBox: {fileID: 1788401826}
 --- !u!114 &1328581114
 MonoBehaviour:

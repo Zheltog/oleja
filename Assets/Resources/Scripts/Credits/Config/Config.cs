@@ -6,7 +6,7 @@ namespace Credits
     [Serializable]
     public class Config
     {
-        public List<string> textLines;
+        public List<string> creditsLines;
         public string menuButtonText;
     }
 }

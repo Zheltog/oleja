@@ -1,4 +1,5 @@
 using System.Collections;
+using Common;
 using UnityEngine;
 
 namespace Garden
@@ -11,7 +12,7 @@ namespace Garden
     
         private void Awake()
         {
-            ConfigManager.Init(configFileName);
+            ConfigProvider<Config>.Init(configFileName);
             StartCoroutine(DisableMainAnimator());
         }
 

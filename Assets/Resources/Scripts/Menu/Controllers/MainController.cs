@@ -9,17 +9,17 @@ namespace Menu
 
         private void Awake()
         {
-            ConfigManager.Init(configFileName);
+            ConfigProvider<Config>.Init(configFileName);
         }
 
         public void NewGame()
         {
-            SceneController.LoadRoomStart();
+            SceneLoader.LoadRoomStart();
         }
 
         public void Credits()
         {
-            SceneController.LoadCredits();
+            SceneLoader.LoadCredits();
         }
 
         public void Exit()

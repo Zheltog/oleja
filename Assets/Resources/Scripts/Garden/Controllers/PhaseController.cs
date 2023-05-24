@@ -28,7 +28,7 @@ namespace Garden
                     _currentPhase = Phase.Escaping;
                     return;
                 case Phase.Escaping:
-                    SceneController.LoadRoomFinish();
+                    SceneLoader.LoadRoomFinish();
                     return;
             }
         }

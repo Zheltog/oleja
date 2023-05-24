@@ -13,10 +13,10 @@ namespace GameOver
             StartCoroutine(ExitAfterSeconds());
         }
 
-        IEnumerator ExitAfterSeconds()
+        private IEnumerator ExitAfterSeconds()
         {
             yield return new WaitForSeconds(durationSeconds);
-            SceneController.LoadMenu();
+            SceneLoader.LoadMenu();
         }
     }
 }

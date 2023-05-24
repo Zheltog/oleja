@@ -20,11 +20,11 @@ namespace Garden
         public class Tips
         {
             public string closeReading;
-            public List<ItemTips> itemTips;
+            public List<ItemActionTips> itemActionTips;
         }
 
         [Serializable]
-        public class ItemTips
+        public class ItemActionTips
         {
             public string itemName;
             public List<TipForPhase> tipsForPhases;

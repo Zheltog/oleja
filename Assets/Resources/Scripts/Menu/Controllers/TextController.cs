@@ -1,3 +1,4 @@
+using Common;
 using TMPro;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Menu
 
         private void Start()
         {
-            var config = ConfigManager.GetConfig();
+            var config = ConfigProvider<Config>.GetConfig();
             newGameButtonTextBox.text = config.newGameButtonText;
             creditsButtonTextBox.text = config.creditsButtonText;
             exitButtonTextBox.text = config.exitButtonText;

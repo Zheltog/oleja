@@ -1,3 +1,4 @@
+using Common;
 using TMPro;
 using UnityEngine;
 
@@ -5,10 +6,10 @@ namespace Garden
 {
     public class TextController: MonoBehaviour
     {
-        public TextMeshProUGUI tipText;
-        public TextMeshProUGUI closeReadingTipText;
-        public TextMeshProUGUI readingText;
-        public GameObject readingPanel;
+        public TextMeshProUGUI itemActionTipTextBox;
+        public TextMeshProUGUI closeReadingTipTextBox;
+        public TextMeshProUGUI readingTextBox;
+        public GameObject panel;
     
         private string _currentInitiator = "";
         private bool _isReading;
@@ -16,10 +17,10 @@ namespace Garden
     
         private void Start()
         {
-            _config = ConfigManager.GetConfig();
+            _config = ConfigProvider<Config>.GetConfig();
             TextControllerProxy.Initialize(this);
-            closeReadingTipText.text = _config.tips.closeReading;
-            readingPanel.SetActive(false);
+            closeReadingTipTextBox.text = _config.tips.closeReading;
+            panel.SetActive(false);
         }
         
         private void Update()
@@ -40,13 +41,13 @@ namespace Garden
             _currentInitiator = initiatorName;
     
             var currentPhase = PhaseControllerProxy.CurrentPhase();
-            var allTips = _config.tips.itemTips;
+            var allTips = _config.tips.itemActionTips;
             var tipsForItem = allTips.Find(tips => tips.itemName == initiatorName);
             var tipForPhase = tipsForItem.tipsForPhases.Find(tip => tip.phase == currentPhase.ToString());
     
             if (tipForPhase != null)
             {
-                tipText.text = tipForPhase.tip;
+                itemActionTipTextBox.text = tipForPhase.tip;
             }
         }
     
@@ -58,21 +59,21 @@ namespace Garden
             }
     
             _currentInitiator = null;
-            tipText.text = "";
+            itemActionTipTextBox.text = "";
         }
         
         public void StartReading(string itemName)
         {
             Time.timeScale = 0;
-            readingPanel.SetActive(true);
-            readingText.text = _config.texts.Find(itemText => itemText.itemName == itemName).text;
+            panel.SetActive(true);
+            readingTextBox.text = _config.texts.Find(itemText => itemText.itemName == itemName).text;
             _isReading = true;
         }
     
         private void StopReading()
         {
-            readingText.text = "";
-            readingPanel.SetActive(false);
+            readingTextBox.text = "";
+            panel.SetActive(false);
             _isReading = false;
             Time.timeScale = 1;
         }

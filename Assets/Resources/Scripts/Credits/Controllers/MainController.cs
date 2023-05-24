@@ -9,12 +9,12 @@ namespace Credits
     
         private void Awake()
         {
-            ConfigManager.Init(configFileName);
+            ConfigProvider<Config>.Init(configFileName);
         }
 
         public void Menu()
         {
-            SceneController.LoadMenu();
+            SceneLoader.LoadMenu();
         }
     }
 }

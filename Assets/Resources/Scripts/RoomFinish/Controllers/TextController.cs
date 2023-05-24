@@ -16,15 +16,15 @@ namespace RoomFinish
         public float pitchRangeMax = 0.8f;
 
         private AudioController _audio;
-        private List<string> _textLines;
+        private List<string> _forumMessageLines;
         private string _currentText = "";
         private int _currentLineIndex;
         private bool _isPrinting;
 
         private void Start()
         {
-            var config = ConfigManager.GetConfig();
-            _textLines = config.textLines;
+            var config = ConfigProvider<Config>.GetConfig();
+            _forumMessageLines = config.forumMessageLines;
             _audio = GetComponent<AudioController>();
         }
 
@@ -48,20 +48,20 @@ namespace RoomFinish
                 return;
             }
 
-            if (_currentLineIndex == _textLines.Count)
+            if (_currentLineIndex == _forumMessageLines.Count)
             {
-                SceneController.LoadGameOver();
+                SceneLoader.LoadGameOver();
                 return;
             }
 
             StartCoroutine(PrintNextLine());
         }
 
-        IEnumerator PrintNextLine()
+        private IEnumerator PrintNextLine()
         {
             _isPrinting = true;
 
-            var chars = _textLines[_currentLineIndex].ToCharArray();
+            var chars = _forumMessageLines[_currentLineIndex].ToCharArray();
             var prevChar = ' ';
 
             foreach (var currentChar in chars)

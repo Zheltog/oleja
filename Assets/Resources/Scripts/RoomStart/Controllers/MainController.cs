@@ -1,3 +1,4 @@
+using Common;
 using UnityEngine;
 
 namespace RoomStart
@@ -8,7 +9,7 @@ namespace RoomStart
     
         private void Awake()
         {
-            ConfigManager.Init(configFileName);
+            ConfigProvider<Config>.Init(configFileName);
         }
     }
 }
