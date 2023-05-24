@@ -9,6 +9,7 @@ namespace Credits
     {
         public float secondsBeforeNextLine = 3f;
         public TextMeshProUGUI textBox;
+        public TextMeshProUGUI menuButtonTextBox;
         
         private List<string> _textLines;
         private int _currentLine;
@@ -16,6 +17,7 @@ namespace Credits
         private void Start()
         {
             var config = ConfigManager.GetConfig();
+            menuButtonTextBox.text = config.menuButtonText;
             _textLines = config.textLines;
 
             StartCoroutine(PrintLines());

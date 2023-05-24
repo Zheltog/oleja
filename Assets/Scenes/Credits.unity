@@ -5232,7 +5232,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114719487074237558, guid: b5cab78b7f36c4860b4674677d76b79e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b5cab78b7f36c4860b4674677d76b79e, type: 3}
 --- !u!4 &573529811 stripped
 Transform:
@@ -7189,7 +7190,7 @@ GameObject:
   - component: {fileID: 825064919}
   - component: {fileID: 825064918}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7262,7 +7263,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1328581114}
         m_TargetAssemblyTypeName: Credits.MainController, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12325,6 +12326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsBeforeNextLine: 5
   textBox: {fileID: 1173998942}
+  menuButtonTextBox: {fileID: 1788401826}
 --- !u!114 &1328581114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16950,9 +16952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Back
-
-'
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0cb720323a0d29c41a5757b9a244c93b, type: 2}
   m_sharedMaterial: {fileID: 3087783010536549504, guid: 0cb720323a0d29c41a5757b9a244c93b, type: 2}

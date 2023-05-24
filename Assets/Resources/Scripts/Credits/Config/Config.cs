@@ -7,5 +7,6 @@ namespace Credits
     public class Config
     {
         public List<string> textLines;
+        public string menuButtonText;
     }
 }

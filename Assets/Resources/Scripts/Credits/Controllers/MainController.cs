@@ -12,7 +12,7 @@ namespace Credits
             ConfigManager.Init(configFileName);
         }
 
-        public void Back()
+        public void Menu()
         {
             SceneController.LoadMenu();
         }
