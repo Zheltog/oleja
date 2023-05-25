@@ -40,6 +40,11 @@ namespace Garden
             var deltaZ = Input.GetAxis("Vertical") * _currentSpeed;
             var deltaX = Input.GetAxis("Horizontal") * _currentSpeed;
 
+            if ((deltaX != 0 || deltaZ < 0) && _isRunning)
+            {
+                StopRunning();
+            }
+
             var movement = transform.TransformDirection(
                 Vector3.ClampMagnitude(new Vector3(deltaX, 0, deltaZ), _currentSpeed) * Time.deltaTime
             );
@@ -67,7 +72,7 @@ namespace Garden
 
         private void ProcessSquatting()
         {
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.LeftControl))
             {
                 if (!_isSquatting && !_isRunning)
                 {
@@ -75,16 +80,14 @@ namespace Garden
                     _currentSpeed = squattingSpeed;
                     SitDown();
                 }
+                return;
             }
-
-            if (Input.GetKeyUp(KeyCode.LeftControl))
+            
+            if (_isSquatting)
             {
-                if (_isSquatting)
-                {
-                    _isSquatting = false;
-                    _currentSpeed = calmSpeed;
-                    StandUp();
-                }
+                _isSquatting = false;
+                _currentSpeed = calmSpeed;
+                StandUp();
             }
         }
 
@@ -103,10 +106,15 @@ namespace Garden
             {
                 if (_isRunning)
                 {
-                    _isRunning = false;
-                    _currentSpeed = calmSpeed;
+                    StopRunning();
                 }
             }
+        }
+
+        private void StopRunning()
+        {
+            _isRunning = false;
+            _currentSpeed = calmSpeed;
         }
 
         private void SitDown()
