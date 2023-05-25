@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4593,6 +4593,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WelcomeMat_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6070489090118878978, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070489090118878978, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9062602307051458104, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -4644,6 +4652,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9062602307051458104, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
   m_PrefabInstance: {fileID: 173384042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &173384044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4228638966643171970, guid: 7ade998a75360c54ca6e55373981e604, type: 3}
+  m_PrefabInstance: {fileID: 173384042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &173384045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173384044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b967d456301ab8429e0a349953f9a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &178180033
 GameObject:
   m_ObjectHideFlags: 0
@@ -24683,6 +24708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_Ceiling_Apt_05
       objectReference: {fileID: 0}
+    - target: {fileID: 2596148168777197119, guid: 36dee4e097ce701479331df2321c1de3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4476616957499719488, guid: 36dee4e097ce701479331df2321c1de3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -25810,6 +25839,10 @@ PrefabInstance:
     - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_Name
       value: Lamp_Wall_Apt_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7443813105009547441, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_ReflectionProbeUsage
@@ -29768,6 +29801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_Wall_Apt_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7443813105009547441, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_ReflectionProbeUsage
       value: 0
@@ -32800,6 +32837,10 @@ PrefabInstance:
     - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_Name
       value: Lamp_Wall_Apt_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7443813105009547441, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_ReflectionProbeUsage
@@ -42082,6 +42123,7 @@ MonoBehaviour:
   configFileName: Json/roomfinish
   mainAnimator: {fileID: 689608834}
   disableMainAnimatorAfterSeconds: 11
+  blackScreenSeconds: 5
 --- !u!114 &1150131575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43192,6 +43234,10 @@ PrefabInstance:
     - target: {fileID: 2596148168777197119, guid: 36dee4e097ce701479331df2321c1de3, type: 3}
       propertyPath: m_Name
       value: Lamp_Ceiling_Apt_05 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596148168777197119, guid: 36dee4e097ce701479331df2321c1de3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4476616957499719488, guid: 36dee4e097ce701479331df2321c1de3, type: 3}
       propertyPath: m_RootOrder
@@ -65860,7 +65906,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.3, y: 1, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1855076788
 MeshRenderer:
@@ -74653,7 +74699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2085170113
 Transform:
   m_ObjectHideFlags: 0
@@ -76409,6 +76455,10 @@ PrefabInstance:
     - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_Name
       value: Lamp_Wall_Apt_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796306477278337937, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7443813105009547441, guid: 422f7f767554b114a9a1f54038a5710b, type: 3}
       propertyPath: m_ReflectionProbeUsage

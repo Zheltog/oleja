@@ -13,5 +13,10 @@ namespace RoomFinish
         {
             _controller.StopTyping();
         }
+
+        public static void ToBeContinued()
+        {
+            _controller.ToBeContinued();
+        }
     }
 }
