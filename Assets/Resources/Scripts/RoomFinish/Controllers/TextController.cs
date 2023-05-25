@@ -54,7 +54,7 @@ namespace RoomFinish
 
         private void OnPrintCompleted()
         {
-            SceneLoader.LoadGameOver();
+            MainControllerProxy.StopTyping();
         }
     }
 }
