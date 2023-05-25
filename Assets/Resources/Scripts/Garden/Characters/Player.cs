@@ -8,13 +8,11 @@ namespace Garden
         public float calmSpeed = 2.0f;
         public float runningSpeed = 10.0f;
         public float rotHorSen = 7.0f;
-        public float headMinY = 1.0f;
-        public Transform head;
 
         private Rigidbody _rigidbody;
+        private Animator _animator;
         private Light _flashlight;
         private float _currentRotY;
-        private float _headMaxY;
         private bool _isFlashlightOn = true;
         private bool _isSquatting;
         private bool _isRunning;
@@ -23,8 +21,8 @@ namespace Garden
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _animator = GetComponent<Animator>();
             _flashlight = GetComponentInChildren<Light>();
-            _headMaxY = head.transform.localPosition.y;
             _currentRotY = transform.rotation.eulerAngles.y;
             _currentSpeed = calmSpeed;
         }
@@ -119,14 +117,12 @@ namespace Garden
 
         private void SitDown()
         {
-            var headPosition = head.localPosition;
-            head.localPosition = new Vector3(headPosition.x, headMinY, headPosition.z);
+            _animator.Play("SitDown", 0, 0);
         }
 
         private void StandUp()
         {
-            var headPosition = head.localPosition;
-            head.localPosition = new Vector3(headPosition.x, _headMaxY, headPosition.z);
+            _animator.Play("StandUp", 0, 0);
         }
     }
 }
