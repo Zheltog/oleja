@@ -17,12 +17,15 @@ namespace Garden
         public float fovDistance = 10f;
 
         private bool _isAwake;
+        private bool _isRunning;
         private GameObject _visible;
         private Rigidbody _rigidbody;
         private BoxCollider _collider;
+        private Animator _animator;
 
         private void Start()
         {
+            _animator = GetComponentInChildren<Animator>();
             _visible = transform.GetChild(0).gameObject;
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<BoxCollider>();
@@ -40,10 +43,22 @@ namespace Garden
 
             if (IsPlayerInFOV() && !IsPlayerBehindObstacle())
             {
+                if (!_isRunning)
+                {
+                    _isRunning = true;
+                    _animator.SetBool("Running", true);
+                }
+                
                 PursuePlayer();
             }
             else
             {
+                if (_isRunning)
+                {
+                    _isRunning = false;
+                    _animator.SetBool("Running", false);
+                }
+                
                 SearchForPlayer();
             }
         }
@@ -58,7 +73,7 @@ namespace Garden
 
         private void PursuePlayer()
         {
-            // Debug.Log("I C U");
+            Debug.Log("I C U");
             transform.LookAt(playerMain);
             transform.Translate(0, 0, runningSpeed * Time.deltaTime);
         }
