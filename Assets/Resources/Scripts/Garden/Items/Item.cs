@@ -4,11 +4,8 @@ namespace Garden
 {
     public abstract class Item : MonoBehaviour
     {
-        public float maxInteractionDistance = 1f;
         public bool requiresItemForInteraction;
         public string requiredItemName;
-        public float playerFOV = 60f; // TODO
-        public Transform player;
 
         private bool _isAvailable;
         private bool _isInteracted;
@@ -20,25 +17,7 @@ namespace Garden
                 return;
             }
 
-            if (Vector3.Distance(transform.position, player.position) > maxInteractionDistance)
-            {
-                ResetIsAvailable();
-                return;
-            }
-
-            if (!IsInPlayerFov())
-            {
-                ResetIsAvailable();
-                return;
-            }
-
-            if (!_isAvailable)
-            {
-                _isAvailable = true;
-                TextControllerProxy.ShowTip(gameObject.name);
-            }
-
-            if (Input.GetKeyDown(KeyCode.E))
+            if (_isAvailable && Input.GetKeyDown(KeyCode.E))
             {
                 if (requiresItemForInteraction && !CollectingControllerProxy.IsCollected(requiredItemName))
                 {
@@ -51,21 +30,16 @@ namespace Garden
             }
         }
 
-        private bool IsInPlayerFov()
+        public void SetAvailable()
         {
-            var pt = player.transform;
-            var playerForward = pt.forward;
-            var directionToItem = transform.position - pt.position;
-            return Vector3.Angle(playerForward, directionToItem) < playerFOV / 2;
+            _isAvailable = true;
+            TextControllerProxy.ShowTip(gameObject.name);
         }
 
-        private void ResetIsAvailable()
+        public void SetUnavailable()
         {
-            if (_isAvailable)
-            {
-                _isAvailable = false;
-                TextControllerProxy.HideTip(gameObject.name);
-            }
+            _isAvailable = false;
+            TextControllerProxy.HideTip(gameObject.name);
         }
 
         protected abstract void Interact();
