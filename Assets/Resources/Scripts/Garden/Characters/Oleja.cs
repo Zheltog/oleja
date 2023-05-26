@@ -7,14 +7,15 @@ namespace Garden
     {
         public Transform playerHead;
         public Transform playerMain;
+        public Flashlight playerFlashlight;
         public float calmSpeed = 1.0f;
         public float runningSpeed = 5.0f;
         public float obstacleCheckRange = 5.0f;
         public float obstacleCheckSphereRadius = 0.75f;
-        public float randomTurnMinAngle = -110f;
-        public float randomTurnMaxAngle = 110f;
-        public float fovAngle = 60f;
-        public float fovDistance = 10f;
+        public float randomTurnMinAngle = -120f;
+        public float randomTurnMaxAngle = 120f;
+        public float fovAngle = 120f;
+        public float seeingDistance = 10f;
 
         private bool _isAwake;
         private bool _isRunning;
@@ -109,8 +110,12 @@ namespace Garden
         private bool IsPlayerBehindObstacle()
         {
             var direction = playerHead.position - transform.position;
-            var raycastDistance = direction.magnitude < fovDistance ? direction.magnitude : fovDistance;
+            
+            var raycastDistance = direction.magnitude < seeingDistance ? direction.magnitude :
+                playerFlashlight.IsOn ? direction.magnitude : seeingDistance;
+            
             var ray = new Ray(transform.position, direction.normalized);
+            
             var hits = Physics.RaycastAll(ray, raycastDistance);
 
             if (hits.Length == 0)

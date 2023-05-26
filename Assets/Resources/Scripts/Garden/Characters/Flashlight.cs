@@ -5,8 +5,9 @@ namespace Garden
 {
     public class Flashlight: MonoBehaviour
     {
+        public bool IsOn { get; private set; } = true;
+        
         private Light _flashlight;
-        private bool _isFlashlightOn = true;
 
         private void Start()
         {
@@ -25,8 +26,8 @@ namespace Garden
                 return;
             }
 
-            _isFlashlightOn = !_isFlashlightOn;
-            _flashlight.enabled = _isFlashlightOn;
+            IsOn = !IsOn;
+            _flashlight.enabled = IsOn;
         }
     }
 }
