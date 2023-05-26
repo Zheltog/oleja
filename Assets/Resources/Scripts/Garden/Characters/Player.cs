@@ -9,6 +9,7 @@ namespace Garden
         public float calmSpeed = 2.0f;
         public float runningSpeed = 10.0f;
         public float rotHorSen = 7.0f;
+        public AudioSource footsteps;
 
         private Rigidbody _rigidbody;
         private Animator _animator;
@@ -38,6 +39,18 @@ namespace Garden
             if ((deltaX != 0 || deltaZ < 0) && _isRunning)
             {
                 StopRunning();
+            }
+
+            if (deltaX == 0 && deltaZ == 0)
+            {
+                footsteps.Pause();
+            }
+            else
+            {
+                if (!footsteps.isPlaying)
+                {
+                    footsteps.Play();
+                }
             }
 
             var movement = transform.TransformDirection(
