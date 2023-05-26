@@ -1,3 +1,4 @@
+using Common;
 using UnityEngine;
 
 namespace RoomFinish
@@ -6,31 +7,38 @@ namespace RoomFinish
     {
         public float speed = 2.0f;
         public float rotHorSen = 7.0f;
-        public AudioSource footsteps;
+        public bool isActive = false;   // TODO
         
+        private FootstepsAudioSource _footsteps;
         private Rigidbody _rigidbody;
         private float _currentRotY;
 
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _footsteps = GetComponentInChildren<FootstepsAudioSource>();
             _currentRotY = transform.rotation.eulerAngles.y;
         }
         
         private void Update()
         {
+            if (TimeStopper.IsTimeStopped || !isActive)
+            {
+                return;
+            }
+            
             var deltaZ = Input.GetAxis("Vertical") * speed;
             var deltaX = Input.GetAxis("Horizontal") * speed;
             
             if (deltaX == 0 && deltaZ == 0)
             {
-                footsteps.Pause();
+                _footsteps.Pause();
             }
             else
             {
-                if (!footsteps.isPlaying)
+                if (!_footsteps.IsPlaying())
                 {
-                    footsteps.Play();
+                    _footsteps.Play();
                 }
             }
             

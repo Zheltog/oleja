@@ -9,8 +9,9 @@ namespace Garden
         public float calmSpeed = 2.0f;
         public float runningSpeed = 10.0f;
         public float rotHorSen = 7.0f;
-        public AudioSource footsteps;
+        public bool isActive = false;   // TODO
 
+        private FootstepsAudioSource _footsteps;
         private Rigidbody _rigidbody;
         private Animator _animator;
         private float _currentRotY;
@@ -22,18 +23,15 @@ namespace Garden
         {
             _rigidbody = GetComponent<Rigidbody>();
             _animator = GetComponent<Animator>();
+            _footsteps = GetComponentInChildren<FootstepsAudioSource>();
             _currentRotY = transform.rotation.eulerAngles.y;
             _currentSpeed = calmSpeed;
         }
 
         private void Update()
         {
-            if (TimeStopper.IsTimeStopped)
+            if (TimeStopper.IsTimeStopped || !isActive)
             {
-                if (footsteps.isPlaying)
-                {
-                    footsteps.Pause();
-                }
                 return;
             }
 
@@ -47,13 +45,13 @@ namespace Garden
 
             if (deltaX == 0 && deltaZ == 0)
             {
-                footsteps.Pause();
+                _footsteps.Pause();
             }
             else
             {
-                if (!footsteps.isPlaying)
+                if (!_footsteps.IsPlaying())
                 {
-                    footsteps.Play();
+                    _footsteps.Play();
                 }
             }
 
@@ -79,7 +77,7 @@ namespace Garden
                     _isSquatting = true;
                     _currentSpeed = squattingSpeed;
                     SitDown();
-                    SetSquattingStepsSound();
+                    _footsteps.IncreasePitch(squattingSpeed / calmSpeed);
                 }
                 return;
             }
@@ -89,7 +87,7 @@ namespace Garden
                 _isSquatting = false;
                 _currentSpeed = calmSpeed;
                 StandUp();
-                SetCalmStepsSound();
+                _footsteps.ResetPitch();
             }
         }
 
@@ -101,7 +99,7 @@ namespace Garden
                 {
                     _isRunning = true;
                     _currentSpeed = runningSpeed;
-                    SetRunningStepsSound();
+                    _footsteps.IncreasePitch(runningSpeed / calmSpeed);
                 }
             }
 
@@ -114,29 +112,11 @@ namespace Garden
             }
         }
 
-        private void SetRunningStepsSound()
-        {
-            var coefficient = runningSpeed / calmSpeed;
-            footsteps.pitch = coefficient;
-            // footsteps.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", 1f / coefficient);
-        }
-
-        private void SetCalmStepsSound()
-        {
-            footsteps.pitch = 1;
-        }
-
-        private void SetSquattingStepsSound()
-        {
-            var coefficient = squattingSpeed / calmSpeed;
-            footsteps.pitch = coefficient;
-        }
-
         private void StopRunning()
         {
             _isRunning = false;
             _currentSpeed = calmSpeed;
-            SetCalmStepsSound();
+            _footsteps.ResetPitch();
         }
 
         private void SitDown()
