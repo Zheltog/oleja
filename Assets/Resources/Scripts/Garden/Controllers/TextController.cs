@@ -64,7 +64,7 @@ namespace Garden
         
         public void StartReading(string itemName)
         {
-            Time.timeScale = 0;
+            TimeStopper.StopTime();
             panel.SetActive(true);
             readingTextBox.text = _config.texts.Find(itemText => itemText.itemName == itemName).text;
             _isReading = true;
@@ -75,7 +75,7 @@ namespace Garden
             readingTextBox.text = "";
             panel.SetActive(false);
             _isReading = false;
-            Time.timeScale = 1;
+            TimeStopper.ResumeTime();
         }
     }
 }

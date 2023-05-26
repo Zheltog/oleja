@@ -1,3 +1,4 @@
+using Common;
 using UnityEngine;
 
 namespace Garden
@@ -11,9 +12,7 @@ namespace Garden
 
         private Rigidbody _rigidbody;
         private Animator _animator;
-        private Light _flashlight;
         private float _currentRotY;
-        private bool _isFlashlightOn = true;
         private bool _isSquatting;
         private bool _isRunning;
         private float _currentSpeed;
@@ -22,17 +21,15 @@ namespace Garden
         {
             _rigidbody = GetComponent<Rigidbody>();
             _animator = GetComponent<Animator>();
-            _flashlight = GetComponentInChildren<Light>();
             _currentRotY = transform.rotation.eulerAngles.y;
             _currentSpeed = calmSpeed;
         }
 
         private void Update()
         {
-            if (Time.timeScale < 1)
+            if (TimeStopper.IsTimeStopped)
             {
                 return;
-                // TODO: ?
             }
 
             var deltaZ = Input.GetAxis("Vertical") * _currentSpeed;
@@ -52,20 +49,8 @@ namespace Garden
             _currentRotY += Input.GetAxis("Mouse X") * rotHorSen;
             transform.localEulerAngles = new Vector3(0, _currentRotY, 0);
 
-            ProcessFlashlightSwitch();
             ProcessSquatting();
             ProcessRunning();
-        }
-
-        private void ProcessFlashlightSwitch()
-        {
-            if (!Input.GetKeyDown(KeyCode.F))
-            {
-                return;
-            }
-
-            _isFlashlightOn = !_isFlashlightOn;
-            _flashlight.enabled = _isFlashlightOn;
         }
 
         private void ProcessSquatting()
