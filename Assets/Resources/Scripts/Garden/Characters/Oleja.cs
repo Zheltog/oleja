@@ -8,6 +8,7 @@ namespace Garden
         public Transform playerHead;
         public Transform playerMain;
         public Flashlight playerFlashlight;
+        public AudioSource footsteps;
         public float calmSpeed = 1.0f;
         public float runningSpeed = 5.0f;
         public float obstacleCheckRange = 5.0f;
@@ -33,6 +34,7 @@ namespace Garden
             _visible.SetActive(false);
             _rigidbody.useGravity = false;
             _collider.enabled = false;
+            footsteps.enabled = false;
         }
 
         private void Update()
@@ -42,12 +44,23 @@ namespace Garden
                 return;
             }
 
+            if (TimeStopper.IsTimeStopped && footsteps.enabled)
+            {
+                footsteps.enabled = false;
+            }
+
+            if (!TimeStopper.IsTimeStopped && !footsteps.enabled)
+            {
+                footsteps.enabled = true;
+            }
+
             if (IsPlayerInFOV() && !IsPlayerBehindObstacle())
             {
                 if (!_isRunning)
                 {
                     _isRunning = true;
                     _animator.SetBool("Running", true);
+                    SetRunningStepsSound();
                 }
                 
                 PursuePlayer();
@@ -58,6 +71,7 @@ namespace Garden
                 {
                     _isRunning = false;
                     _animator.SetBool("Running", false);
+                    SetCalmStepsSound();
                 }
                 
                 SearchForPlayer();
@@ -134,6 +148,18 @@ namespace Garden
             }
 
             return false;
+        }
+        
+        private void SetRunningStepsSound()
+        {
+            var coefficient = runningSpeed / calmSpeed;
+            footsteps.pitch = coefficient;
+            // footsteps.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", 1f / coefficient);
+        }
+
+        private void SetCalmStepsSound()
+        {
+            footsteps.pitch = 1;
         }
 
         private void OnCollisionEnter(Collision other)

@@ -30,6 +30,10 @@ namespace Garden
         {
             if (TimeStopper.IsTimeStopped)
             {
+                if (footsteps.isPlaying)
+                {
+                    footsteps.Pause();
+                }
                 return;
             }
 
@@ -75,6 +79,7 @@ namespace Garden
                     _isSquatting = true;
                     _currentSpeed = squattingSpeed;
                     SitDown();
+                    SetSquattingStepsSound();
                 }
                 return;
             }
@@ -84,6 +89,7 @@ namespace Garden
                 _isSquatting = false;
                 _currentSpeed = calmSpeed;
                 StandUp();
+                SetCalmStepsSound();
             }
         }
 
@@ -95,6 +101,7 @@ namespace Garden
                 {
                     _isRunning = true;
                     _currentSpeed = runningSpeed;
+                    SetRunningStepsSound();
                 }
             }
 
@@ -107,10 +114,29 @@ namespace Garden
             }
         }
 
+        private void SetRunningStepsSound()
+        {
+            var coefficient = runningSpeed / calmSpeed;
+            footsteps.pitch = coefficient;
+            // footsteps.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", 1f / coefficient);
+        }
+
+        private void SetCalmStepsSound()
+        {
+            footsteps.pitch = 1;
+        }
+
+        private void SetSquattingStepsSound()
+        {
+            var coefficient = squattingSpeed / calmSpeed;
+            footsteps.pitch = coefficient;
+        }
+
         private void StopRunning()
         {
             _isRunning = false;
             _currentSpeed = calmSpeed;
+            SetCalmStepsSound();
         }
 
         private void SitDown()
