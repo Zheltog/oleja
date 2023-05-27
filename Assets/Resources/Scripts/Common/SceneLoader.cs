@@ -28,6 +28,11 @@ namespace Common
         {
             SceneManager.LoadScene("RoomFinish", LoadSceneMode.Single);
         }
+        
+        public static void LoadRoomFinishAlt()
+        {
+            SceneManager.LoadScene("RoomFinishAlt", LoadSceneMode.Single);
+        }
     
         public static void LoadGameOver()
         {

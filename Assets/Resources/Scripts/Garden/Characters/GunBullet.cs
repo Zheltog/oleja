@@ -11,7 +11,7 @@ namespace Garden
         {
             if (other.gameObject.TryGetComponent<Oleja>(out Oleja _))
             {
-                SceneLoader.LoadCredits();
+                SceneLoader.LoadRoomFinishAlt();
             }
         }
     }

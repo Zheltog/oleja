@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Common;
 using UnityEngine;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
@@ -35,6 +36,11 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
+        if (TimeStopper.IsTimeStopped)
+        {
+            return;
+        }
+        
         //If you want a different input, change it here
         if (Input.GetButtonDown("Fire1"))
         {
