@@ -3,6 +3,16 @@
     "closeReading": "[X] Закрыть",
     "itemActionTips": [
       {
+        "itemName": "FirstAid",
+        "tipsForItemsPresent": [
+          {
+            "itemPresent": "Notebook",
+            "tip": "[E] Открыть аптечку",
+            "priority": 1
+          }
+        ]
+      },
+      {
         "itemName": "CabinetLock",
         "tipsForItemsPresent": [
           {
@@ -123,6 +133,10 @@
     {
       "itemName": "Bag",
       "text": "Какой-то ключ."
+    },
+    {
+      "itemName": "FirstAid",
+      "text": "Аптечка. С успокоительным."
     }
   ]
 }
