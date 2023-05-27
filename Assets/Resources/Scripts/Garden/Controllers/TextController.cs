@@ -25,7 +25,7 @@ namespace Garden
         
         private void Update()
         {
-            if (_isReading && Input.GetKeyDown(KeyCode.Escape))
+            if (_isReading && Input.GetKeyDown(KeyCode.X))
             {
                 StopReading();
             }
