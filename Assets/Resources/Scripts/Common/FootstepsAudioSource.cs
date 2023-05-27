@@ -8,6 +8,7 @@ namespace Common
         public bool isChangeable = false;   // TODO
         
         private AudioSource _source;
+        private bool _forceDisabled;    // TODO
 
         private void Awake()
         {
@@ -17,6 +18,11 @@ namespace Common
 
         private void Update()
         {
+            if (_forceDisabled)
+            {
+                return;
+            }
+            
             if (TimeStopper.IsTimeStopped && _source.enabled)
             {
                 if (_source.isPlaying)
@@ -32,9 +38,15 @@ namespace Common
             }
         }
 
-        public void Disable()
+        public void ForceDisable()
         {
             _source.enabled = false;
+            _forceDisabled = true;
+        }
+
+        public void ForceEnable()
+        {
+            _forceDisabled = false;
         }
 
         public void Play()
