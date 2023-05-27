@@ -16,6 +16,19 @@
         ]
       },
       {
+        "itemName": "Bag",
+        "tipsForPhases": [
+          {
+            "phase": "Exploring",
+            "tip": "[E] Обокрасть"
+          },
+          {
+            "phase": "Escaping",
+            "tip": "[E] Обокрасть"
+          }
+        ]
+      },
+      {
         "itemName": "Notebook",
         "tipsForPhases": [
           {
@@ -107,6 +120,10 @@
     {
       "itemName": "CabinetLock",
       "text": "Пистолет с одним патроном. Беру..."
+    },
+    {
+      "itemName": "Bag",
+      "text": "Ключ. Хм..."
     }
   ]
 }

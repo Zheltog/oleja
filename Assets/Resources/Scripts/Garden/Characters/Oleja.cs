@@ -148,7 +148,10 @@ namespace Garden
         {
             if (other.gameObject.TryGetComponent<Player>(out Player _))
             {
-                SceneLoader.LoadGameOver();
+                if (IsPlayerInFOV())
+                {
+                    SceneLoader.LoadGameOver();
+                }
             }
         }
     }
