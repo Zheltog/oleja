@@ -4,6 +4,7 @@
     "Игра Дани Белога",
     "По мотивам неснятого короткометражного кинофильма 'Олежа' (2017)",
     "В роли Олежи - Илья Олегович Грудкин",
+    "Музыка Дани Белога",
     "В игре использованы беспланые ассеты из Unity Asset Store:",
     "'Adventure Character' by Maksim Bugrimov\n'Apartment Kit' by Brick Project Studio\n'Avatar Maker Free - 3D avatar from a single selfie' by itSeez3D Inc",
     "'Cabin Environment' by Gregory Seguru\n'Environmental Asset Pack' by Joshua Pearson",
@@ -17,8 +18,11 @@
     "'The Shed' by Blackant Master Studio\n'Tools Pack 1' by RRFreelance / Pixelburner",
     "В игре использованы бесплатные звуки с freesound.org от пользователей:",
     "InspectorJ\nJohnsonBrandEditing\nEricsSoundschmiede",
-    "...и другие...",
-    "В игре использованы бесплатные шрифты:\nDusk Demon (RUS by Slavchansky)",
+    "...и некоторые другие...",
+    "В игре использованы бесплатные шрифты:",
+    "Dusk Demon (RUS by Slavchansky)",
+    "При создании игры было задействовано следующее ПО:",
+    "Unity 2021.3.23.f1\nJetBrains Rider 2023.1\nVegas Pro 13\nFL Studio 20",
     "Спасибо за внимание!"
   ],
   "menuButtonText": "Меню"
