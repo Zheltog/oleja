@@ -8,6 +8,7 @@ namespace Garden
         public Transform playerHead;
         public Transform playerMain;
         public Flashlight playerFlashlight;
+        public AudioSource voice;
         public float calmSpeed = 1.0f;
         public float runningSpeed = 5.0f;
         public float obstacleCheckRange = 5.0f;
@@ -52,6 +53,7 @@ namespace Garden
                     _isRunning = true;
                     _animator.SetBool("Running", true);
                     _footsteps.IncreasePitch(runningSpeed / calmSpeed);
+                    voice.Play();
                 }
                 
                 PursuePlayer();
