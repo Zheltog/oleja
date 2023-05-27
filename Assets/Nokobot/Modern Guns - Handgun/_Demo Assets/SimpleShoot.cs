@@ -7,6 +7,7 @@ using UnityEngine;
 public class SimpleShoot : MonoBehaviour
 {
     public int bulletsNumber = 1;
+    public AudioSource shotAudioSource;
     
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
@@ -51,6 +52,7 @@ public class SimpleShoot : MonoBehaviour
             
             //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
+            shotAudioSource.Play();
             _shotsCount++;
         }
     }
