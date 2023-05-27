@@ -6,7 +6,6 @@ namespace Garden
         {
             CollectingControllerProxy.AddItem(gameObject.name);
             TextControllerProxy.StartReading(gameObject.name);
-            Destroy(gameObject);
         }
     }
 }

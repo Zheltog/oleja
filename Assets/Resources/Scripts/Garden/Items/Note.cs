@@ -14,7 +14,6 @@ namespace Garden
             CollectingControllerProxy.AddItem(gameObject.name);
             PhaseControllerProxy.NextPhase();
             TextControllerProxy.StartReading(gameObject.name);
-            Destroy(gameObject);
         }
     }
 
