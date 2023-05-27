@@ -5,6 +5,8 @@ using UnityEngine;
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
 {
+    public int bulletsNumber = 1;
+    
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
@@ -20,6 +22,7 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
+    private int _shotsCount = 0;
 
     void Start()
     {
@@ -35,8 +38,14 @@ public class SimpleShoot : MonoBehaviour
         //If you want a different input, change it here
         if (Input.GetButtonDown("Fire1"))
         {
+            if (_shotsCount >= bulletsNumber)
+            {
+                return;
+            }
+            
             //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
+            _shotsCount++;
         }
     }
 
