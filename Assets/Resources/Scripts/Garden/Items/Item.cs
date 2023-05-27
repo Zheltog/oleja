@@ -32,6 +32,11 @@ namespace Garden
 
         public void SetAvailable()
         {
+            if (_isInteracted)
+            {
+                return;
+            }
+            
             _isAvailable = true;
             TextControllerProxy.ShowTip(gameObject.name);
         }

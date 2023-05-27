@@ -5,11 +5,14 @@ namespace Garden
 {
     public class CollectingController : MonoBehaviour
     {
+        public string nothingItemName = "Nothing";
+        
         private List<string> _collectedItems = new List<string>();
 
         private void Start()
         {
             CollectingControllerProxy.Initialize(this);
+            _collectedItems.Add(nothingItemName);
         }
 
         public void AddItem(string itemName)

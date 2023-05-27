@@ -4,97 +4,96 @@
     "itemActionTips": [
       {
         "itemName": "CabinetLock",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "[E] Открыть шкаф"
+            "itemPresent": "Notebook",
+            "tip": "Заперто",
+            "priority": 1
           },
           {
-            "phase": "Escaping",
-            "tip": "[E] Открыть шкаф"
+            "itemPresent": "Bag",
+            "tip": "[E] Открыть шкаф",
+            "priority": 2
           }
         ]
       },
       {
         "itemName": "Bag",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "[E] Обокрасть"
-          },
-          {
-            "phase": "Escaping",
-            "tip": "[E] Обокрасть"
+            "itemPresent": "Notebook",
+            "tip": "[E] Обокрасть",
+            "priority": 1
           }
         ]
       },
       {
         "itemName": "Notebook",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Entering",
-            "tip": "[E] Прочитать"
+            "itemPresent": "Nothing",
+            "tip": "[E] Прочитать",
+            "priority": 1
           }
         ]
       },
       {
         "itemName": "Crowbar",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "[E] Взять лом"
+            "itemPresent": "Notebook",
+            "tip": "[E] Взять лом",
+            "priority": 1
           }
         ]
       },
       {
         "itemName": "Padlock",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "Тут замок..."
+            "itemPresent": "Notebook",
+            "tip": "Тут замок...",
+            "priority": 1
           },
           {
-            "phase": "Escaping",
-            "tip": "[E] Выломать замок"
+            "itemPresent": "Bag",
+            "tip": "Ключ не подходит...",
+            "priority": 2
+          },
+          {
+            "itemPresent": "Crowbar",
+            "tip": "[E] Выломать замок",
+            "priority": 3
           }
         ]
       },
       {
         "itemName": "StudentID",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "[E] Посмотреть студенческий билет"
-          },
-          {
-            "phase": "Escaping",
-            "tip": "[E] Посмотреть студенческий билет"
+            "itemPresent": "Notebook",
+            "tip": "[E] Посмотреть студенческий билет",
+            "priority": 1
           }
         ]
       },
       {
         "itemName": "Newspaper",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "[E] Посмотреть газеты"
-          },
-          {
-            "phase": "Escaping",
-            "tip": "[E] Посмотреть газеты"
+            "itemPresent": "Notebook",
+            "tip": "[E] Посмотреть газеты",
+            "priority": 1
           }
         ]
       },
       {
         "itemName": "Smartphone",
-        "tipsForPhases": [
+        "tipsForItemsPresent": [
           {
-            "phase": "Exploring",
-            "tip": "[E] Посмотреть телефон"
-          },
-          {
-            "phase": "Escaping",
-            "tip": "[E] Посмотреть телефон"
+            "itemPresent": "Notebook",
+            "tip": "[E] Посмотреть телефон",
+            "priority": 1
           }
         ]
       }

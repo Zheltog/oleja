@@ -27,14 +27,15 @@ namespace Garden
         public class ItemActionTips
         {
             public string itemName;
-            public List<TipForPhase> tipsForPhases;
+            public List<TipForItemPresent> tipsForItemsPresent;
         }
     
         [Serializable]
-        public class TipForPhase
+        public class TipForItemPresent
         {
-            public string phase;
+            public string itemPresent;
             public string tip;
+            public int priority;
         }
     }
 }

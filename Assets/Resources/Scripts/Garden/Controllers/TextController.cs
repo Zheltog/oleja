@@ -1,3 +1,4 @@
+using System.Linq;
 using Common;
 using TMPro;
 using UnityEngine;
@@ -40,14 +41,15 @@ namespace Garden
             
             _currentInitiator = initiatorName;
     
-            var currentPhase = PhaseControllerProxy.CurrentPhase();
             var allTips = _config.tips.itemActionTips;
             var tipsForItem = allTips.Find(tips => tips.itemName == initiatorName);
-            var tipForPhase = tipsForItem.tipsForPhases.Find(tip => tip.phase == currentPhase.ToString());
+            var tip = tipsForItem.tipsForItemsPresent
+                .OrderByDescending(tip => tip.priority)
+                .FirstOrDefault(tip => CollectingControllerProxy.IsCollected(tip.itemPresent));
     
-            if (tipForPhase != null)
+            if (tip != null)
             {
-                itemActionTipTextBox.text = tipForPhase.tip;
+                itemActionTipTextBox.text = tip.tip;
             }
         }
     
