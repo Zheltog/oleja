@@ -5,8 +5,7 @@ namespace Garden
 {
     public class Oleja : MonoBehaviour
     {
-        public Transform playerHead;
-        public Transform playerMain;
+        public Player player;
         public Flashlight playerFlashlight;
         public AudioSource voice;
         public float calmSpeed = 1.0f;
@@ -17,6 +16,7 @@ namespace Garden
         public float randomTurnMaxAngle = 120f;
         public float fovAngle = 120f;
         public float seeingDistance = 10f;
+        public float hearingDistance = 5f;
 
         private bool _isAwake;
         private bool _isRunning;
@@ -45,6 +45,8 @@ namespace Garden
             {
                 return;
             }
+            
+            Listen();
 
             if (IsPlayerInFOV() && !IsPlayerBehindObstacle())
             {
@@ -80,10 +82,18 @@ namespace Garden
             _footsteps.ForceEnable();
         }
 
+        private void Listen()
+        {
+            if (player.IsMoving && !player.IsSquatting && GetDirectionToPlayer().magnitude <= hearingDistance)
+            {
+                transform.LookAt(player.transform);
+            }
+        }
+
         private void PursuePlayer()
         {
-            Debug.Log("I C U");
-            transform.LookAt(playerMain);
+            // Debug.Log("I C U");
+            transform.LookAt(player.transform);
             transform.Translate(0, 0, runningSpeed * Time.deltaTime);
         }
 
@@ -111,13 +121,13 @@ namespace Garden
         {
             var t = transform;
             var forwardDirection = t.forward;
-            var directionToTarget = playerHead.position - t.position;
+            var directionToTarget = player.GetHeadPosition() - t.position;
             return Vector3.Angle(forwardDirection, directionToTarget) < fovAngle / 2;
         }
 
         private bool IsPlayerBehindObstacle()
         {
-            var direction = playerHead.position - transform.position;
+            var direction = GetDirectionToPlayer();
             
             var raycastDistance = direction.magnitude < seeingDistance ? direction.magnitude :
                 playerFlashlight.IsOn ? direction.magnitude : seeingDistance;
@@ -142,6 +152,11 @@ namespace Garden
             }
 
             return false;
+        }
+
+        private Vector3 GetDirectionToPlayer()
+        {
+            return player.GetHeadPosition() - transform.position;
         }
 
         private void OnCollisionEnter(Collision other)
