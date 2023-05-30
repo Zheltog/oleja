@@ -84,7 +84,10 @@ namespace Garden
 
         private void Listen()
         {
-            if (player.IsMoving && !player.IsSquatting && GetDirectionToPlayer().magnitude <= hearingDistance)
+            if (!IsPlayerInFOV() &&
+                player.IsMoving &&
+                !player.IsSquatting &&
+                GetDirectionToPlayer().magnitude <= hearingDistance)
             {
                 transform.LookAt(player.transform);
             }
