@@ -7,7 +7,6 @@ namespace RoomFinish
     {
         public float speed = 2.0f;
         public float rotHorSen = 7.0f;
-        public bool isActive = false;   // TODO
         
         private FootstepsAudioSource _footsteps;
         private Rigidbody _rigidbody;
@@ -22,7 +21,7 @@ namespace RoomFinish
         
         private void Update()
         {
-            if (TimeStopper.IsTimeStopped || !isActive)
+            if (TimeStopper.IsTimeStopped)
             {
                 return;
             }

@@ -36,7 +36,8 @@ namespace Garden
             _visible.SetActive(false);
             _rigidbody.useGravity = false;
             _collider.enabled = false;
-            _footsteps.ForceDisable();
+            _footsteps.Pause();
+            _footsteps.enabled = false;
         }
 
         private void Update()
@@ -79,7 +80,8 @@ namespace Garden
             _visible.SetActive(true);
             _collider.enabled = true;
             _rigidbody.useGravity = true;
-            _footsteps.ForceEnable();
+            _footsteps.enabled = true;
+            _footsteps.Play();
         }
 
         private void Listen()

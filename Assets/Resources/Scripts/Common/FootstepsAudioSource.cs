@@ -5,10 +5,8 @@ namespace Common
     public class FootstepsAudioSource: MonoBehaviour
     {
         public float defaultPitch = 1f;
-        public bool isChangeable = false;   // TODO
         
         private AudioSource _source;
-        private bool _forceDisabled;    // TODO
 
         private void Awake()
         {
@@ -18,11 +16,6 @@ namespace Common
 
         private void Update()
         {
-            if (_forceDisabled)
-            {
-                return;
-            }
-            
             if (TimeStopper.IsTimeStopped && _source.enabled)
             {
                 if (_source.isPlaying)
@@ -38,34 +31,13 @@ namespace Common
             }
         }
 
-        public void ForceDisable()
-        {
-            _source.enabled = false;
-            _forceDisabled = true;
-        }
-
-        public void ForceEnable()
-        {
-            _forceDisabled = false;
-        }
-
         public void Play()
         {
-            if (!isChangeable)
-            {
-                return;
-            }
-            
             _source.Play();
         }
         
         public void Pause()
         {
-            if (!isChangeable)
-            {
-                return;
-            }
-            
             _source.Pause();
         }
 
@@ -76,22 +48,12 @@ namespace Common
 
         public void IncreasePitch(float coefficient)
         {
-            if (!isChangeable)
-            {
-                return;
-            }
-            
             _source.pitch = defaultPitch * coefficient;
             // footsteps.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", 1f / (defaultPitch * coefficient));
         }
 
         public void ResetPitch()
         {
-            if (!isChangeable)
-            {
-                return;
-            }
-            
             _source.pitch = defaultPitch;
         }
     }

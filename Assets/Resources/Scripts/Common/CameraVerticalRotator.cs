@@ -7,13 +7,12 @@ namespace Common
         public float sensitivity = 7;
         public float minAngle = -60;
         public float maxAngle = 60;
-        public bool isActive = false;   // TODO
     
         private float _rotationX;
 
         private void Update()
         {
-            if (TimeStopper.IsTimeStopped || !isActive)
+            if (TimeStopper.IsTimeStopped)
             {
                 return;
             }

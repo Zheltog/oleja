@@ -10,8 +10,7 @@ namespace Garden
         public float calmSpeed = 2.0f;
         public float runningSpeed = 10.0f;
         public float rotHorSen = 7.0f;
-        public bool isActive = false;   // TODO
-        
+
         public bool IsSquatting { get; private set;  }
         public bool IsMoving { get; private set;  }
 
@@ -33,7 +32,7 @@ namespace Garden
 
         private void Update()
         {
-            if (TimeStopper.IsTimeStopped || !isActive)
+            if (TimeStopper.IsTimeStopped)
             {
                 return;
             }
