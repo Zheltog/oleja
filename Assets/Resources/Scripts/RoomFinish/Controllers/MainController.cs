@@ -7,8 +7,8 @@ namespace RoomFinish
     public class MainController: MonoBehaviour
     {
         public string configFileName = "Json/roomfinish";
+        public string standingUpAnimationName = "StopTyping";
         public Animator mainAnimator;
-        public float disableMainAnimatorAfterSeconds = 11f;   // TODO
         public float blackScreenSeconds = 5f;
     
         private void Awake()
@@ -19,8 +19,9 @@ namespace RoomFinish
 
         public void StopTyping()
         {
-            mainAnimator.Play("StopTyping", 0, 0);
-            StartCoroutine(DisableMainAnimator());
+            mainAnimator.Play(standingUpAnimationName, 0, 0);
+            var standingUpSeconds = AnimationUtils.GetAnimationLength(mainAnimator, standingUpAnimationName);
+            StartCoroutine(DisableMainAnimator(standingUpSeconds));
         }
 
         public void ToBeContinued()
@@ -30,9 +31,9 @@ namespace RoomFinish
             StartCoroutine(LoadCreditsAfterBlackScreen());
         }
         
-        private IEnumerator DisableMainAnimator()
+        private IEnumerator DisableMainAnimator(float delay)
         {
-            yield return new WaitForSeconds(disableMainAnimatorAfterSeconds);
+            yield return new WaitForSeconds(delay);
             mainAnimator.enabled = false;
         }
 

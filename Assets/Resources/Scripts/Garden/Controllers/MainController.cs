@@ -7,7 +7,7 @@ namespace Garden
     public class MainController: MonoBehaviour
     {
         public string configFileName = "Json/garden";
-        public float disableMainAnimatorAfterSeconds = 11f;   // TODO
+        public string enteringAnimationName = "GardenEntering";
         public Animator mainAnimator;
         public GameObject mainPanel;
 
@@ -17,7 +17,9 @@ namespace Garden
         {
             _pause = GetComponent<PauseController>();
             ConfigProvider<Config>.Init(configFileName);
-            StartCoroutine(DisableMainAnimator());
+            mainAnimator.Play(enteringAnimationName, 0, 0);
+            var enteringSeconds = AnimationUtils.GetAnimationLength(mainAnimator, enteringAnimationName);
+            StartCoroutine(DisableMainAnimator(enteringSeconds));
         }
 
         private void Update()
@@ -42,9 +44,9 @@ namespace Garden
             }
         }
 
-        private IEnumerator DisableMainAnimator()
+        private IEnumerator DisableMainAnimator(float delay)
         {
-            yield return new WaitForSeconds(disableMainAnimatorAfterSeconds);
+            yield return new WaitForSeconds(delay);
             mainAnimator.enabled = false;
         }
     }
