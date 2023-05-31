@@ -2196,7 +2196,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78569584}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2129e5bf3cdfe0e4eba0063e7c053257, type: 3}
   m_Name: 
@@ -2204,7 +2204,6 @@ MonoBehaviour:
   sensitivity: 7
   minAngle: -60
   maxAngle: 60
-  isActive: 0
 --- !u!1 &79575438
 GameObject:
   m_ObjectHideFlags: 0
@@ -55638,13 +55637,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542450048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 610fbe9ef979473e924795d7dbd62592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPitch: 0.6
-  isChangeable: 0
 --- !u!1 &1543456248
 GameObject:
   m_ObjectHideFlags: 0
@@ -66123,14 +66121,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855076785}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aeb343a3199517449fbd186b6482962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
   rotHorSen: 7
-  isActive: 0
 --- !u!1001 &1858160391
 PrefabInstance:
   m_ObjectHideFlags: 0
