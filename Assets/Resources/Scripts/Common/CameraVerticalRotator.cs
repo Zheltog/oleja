@@ -22,5 +22,4 @@ namespace Common
             transform.localEulerAngles = new Vector3(_rotationX, 0, 0); 
         }
     }
-
 }

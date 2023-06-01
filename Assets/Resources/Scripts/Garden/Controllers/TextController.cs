@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Garden
 {
+    // TODO: some textboxes are initialized via pause controller
     public class TextController: MonoBehaviour
     {
         public TextMeshProUGUI itemActionTipTextBox;

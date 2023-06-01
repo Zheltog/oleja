@@ -1,3 +1,4 @@
+using System.Linq;
 using Common;
 using UnityEngine;
 
@@ -97,7 +98,6 @@ namespace Garden
 
         private void PursuePlayer()
         {
-            // Debug.Log("I C U");
             transform.LookAt(player.transform);
             transform.Translate(0, 0, runningSpeed * Time.deltaTime);
         }
@@ -141,22 +141,8 @@ namespace Garden
             
             var hits = Physics.RaycastAll(ray, raycastDistance);
 
-            if (hits.Length == 0)
-            {
-                return true;
-            }
-
-            foreach (var hit in hits)
-            {
-                if (!hit.transform.TryGetComponent<Player>(out Player _))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            return false;
+            return hits.Length == 0 ||
+                   hits.Select(hit => !hit.transform.TryGetComponent<Player>(out _)).FirstOrDefault();
         }
 
         private Vector3 GetDirectionToPlayer()
@@ -166,7 +152,7 @@ namespace Garden
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.TryGetComponent<Player>(out Player _))
+            if (other.gameObject.TryGetComponent<Player>(out _))
             {
                 if (IsPlayerInFOV())
                 {

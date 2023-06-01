@@ -14,11 +14,6 @@ namespace Garden
             _controller.AddItem(itemName);
         }
 
-        public static void RemoveItem(string itemName)
-        {
-            _controller.RemoveItem(itemName);
-        }
-
         public static bool IsCollected(string itemName)
         {
             return _controller.IsCollected(itemName);

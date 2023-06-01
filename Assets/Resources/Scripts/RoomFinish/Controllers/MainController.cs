@@ -8,6 +8,7 @@ namespace RoomFinish
     {
         public string configFileName = "Json/roomfinish";
         public string standingUpAnimationName = "StopTyping";
+        public Player player;
         public Animator mainAnimator;
         public float blackScreenSeconds = 5f;
     
@@ -27,6 +28,7 @@ namespace RoomFinish
         public void ToBeContinued()
         {
             mainAnimator.enabled = true;
+            player.enabled = false;
             mainAnimator.Play("BlackScreen", 0, 0);
             StartCoroutine(LoadCreditsAfterBlackScreen());
         }

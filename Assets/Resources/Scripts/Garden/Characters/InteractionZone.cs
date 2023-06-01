@@ -6,7 +6,7 @@ namespace Garden
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.TryGetComponent<Item>(out Item item))
+            if (other.gameObject.TryGetComponent<Collectable>(out var item))
             {
                 item.SetAvailable();
             }
@@ -14,7 +14,7 @@ namespace Garden
         
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.TryGetComponent<Item>(out Item item))
+            if (other.gameObject.TryGetComponent<Collectable>(out var item))
             {
                 item.SetUnavailable();
             }

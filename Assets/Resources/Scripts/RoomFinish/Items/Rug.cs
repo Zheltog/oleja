@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace RoomFinish
 {
-    class Rug : MonoBehaviour
+    public class Rug : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {

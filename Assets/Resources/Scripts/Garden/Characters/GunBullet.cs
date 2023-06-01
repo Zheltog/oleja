@@ -9,7 +9,7 @@ namespace Garden
         // TODO: Oleja's collider is large cube...
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.TryGetComponent<Oleja>(out Oleja _))
+            if (other.gameObject.TryGetComponent<Oleja>(out _))
             {
                 SceneLoader.LoadRoomFinishAlt();
             }

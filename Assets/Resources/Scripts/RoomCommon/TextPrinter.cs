@@ -14,14 +14,14 @@ namespace RoomCommon
         public bool IsPrinting { get; private set; }
         public bool IsCompleted { get; private set; }
         
-        private AudioController _audio;
+        private TextAudioController _audio;
         private List<string> _textLines;
         private string _currentText = "";
         private int _currentLineIndex;
 
         private void Start()
         {
-            _audio = GetComponent<AudioController>();
+            _audio = GetComponent<TextAudioController>();
         }
 
         public void Init(List<string> textLines)

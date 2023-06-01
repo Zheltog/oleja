@@ -7,7 +7,7 @@ namespace Garden
     {
         public string nothingItemName = "Nothing";
         
-        private List<string> _collectedItems = new List<string>();
+        private readonly List<string> _collectedItems = new();
 
         private void Start()
         {
@@ -18,11 +18,6 @@ namespace Garden
         public void AddItem(string itemName)
         {
             _collectedItems.Add(itemName);
-        }
-
-        public void RemoveItem(string itemName)
-        {
-            _collectedItems.Remove(itemName);
         }
 
         public bool IsCollected(string itemName)
