@@ -3343,7 +3343,6 @@ GameObject:
   - component: {fileID: 205707095}
   - component: {fileID: 205707094}
   - component: {fileID: 205707093}
-  - component: {fileID: 205707092}
   m_Layer: 0
   m_Name: Door.R.002
   m_TagString: Untagged
@@ -3366,21 +3365,6 @@ Transform:
   m_Father: {fileID: 1217836358}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &205707092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205707090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f1c4265d2e233469ca3a33b18036d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlipL: {fileID: 205707093}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &205707093
 Animator:
   serializedVersion: 5
@@ -10529,7 +10513,6 @@ GameObject:
   - component: {fileID: 463730644}
   - component: {fileID: 463730643}
   - component: {fileID: 463730642}
-  - component: {fileID: 463730641}
   m_Layer: 0
   m_Name: Door.L.002
   m_TagString: Untagged
@@ -10552,21 +10535,6 @@ Transform:
   m_Father: {fileID: 1217836358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &463730641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463730639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f1c4265d2e233469ca3a33b18036d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlipL: {fileID: 463730642}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &463730642
 Animator:
   serializedVersion: 5
@@ -14618,7 +14586,6 @@ GameObject:
   - component: {fileID: 704949415}
   - component: {fileID: 704949414}
   - component: {fileID: 704949413}
-  - component: {fileID: 704949412}
   - component: {fileID: 704949411}
   - component: {fileID: 704949410}
   m_Layer: 0
@@ -14669,21 +14636,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.057980686, y: 0.24638665, z: 0.92256856}
   m_Center: {x: 0.47236276, y: 0.07664928, z: -0.04085523}
---- !u!114 &704949412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704949408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 770aee30421368f4899e57b35481b2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclosewindow: {fileID: 704949413}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &704949413
 Animator:
   serializedVersion: 5

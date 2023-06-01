@@ -12444,7 +12444,6 @@ GameObject:
   - component: {fileID: 431805472}
   - component: {fileID: 431805471}
   - component: {fileID: 431805470}
-  - component: {fileID: 431805469}
   m_Layer: 0
   m_Name: Broiler_Door
   m_TagString: Untagged
@@ -12468,21 +12467,6 @@ Transform:
   m_Father: {fileID: 1443604240}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &431805469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431805467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86ae241f95cb0464188693a338d04798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandcloseoven: {fileID: 431805470}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &431805470
 Animator:
   serializedVersion: 5
@@ -15210,7 +15194,6 @@ GameObject:
   - component: {fileID: 517864549}
   - component: {fileID: 517864548}
   - component: {fileID: 517864547}
-  - component: {fileID: 517864546}
   m_Layer: 0
   m_Name: Door.R.002
   m_TagString: Untagged
@@ -15233,21 +15216,6 @@ Transform:
   m_Father: {fileID: 820943092}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &517864546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517864544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f1c4265d2e233469ca3a33b18036d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlipL: {fileID: 517864547}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &517864547
 Animator:
   serializedVersion: 5
@@ -24939,7 +24907,6 @@ GameObject:
   - component: {fileID: 864416245}
   - component: {fileID: 864416244}
   - component: {fileID: 864416243}
-  - component: {fileID: 864416242}
   - component: {fileID: 864416241}
   m_Layer: 0
   m_Name: ClosetDoor
@@ -24985,21 +24952,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &864416242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864416239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Closetopenandclose: {fileID: 864416241}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &864416243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29010,7 +28962,6 @@ GameObject:
   - component: {fileID: 1016724401}
   - component: {fileID: 1016724400}
   - component: {fileID: 1016724399}
-  - component: {fileID: 1016724398}
   m_Layer: 0
   m_Name: Oven_Door
   m_TagString: Untagged
@@ -29036,21 +28987,6 @@ Transform:
   m_Father: {fileID: 1443604240}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1016724398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016724396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86ae241f95cb0464188693a338d04798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandcloseoven: {fileID: 1016724399}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1016724399
 Animator:
   serializedVersion: 5
@@ -34385,7 +34321,6 @@ GameObject:
   - component: {fileID: 1214663652}
   - component: {fileID: 1214663651}
   - component: {fileID: 1214663650}
-  - component: {fileID: 1214663649}
   - component: {fileID: 1214663648}
   m_Layer: 0
   m_Name: ClosetDoor
@@ -34431,21 +34366,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1214663649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214663646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Closetopenandclose: {fileID: 1214663648}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1214663650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35857,7 +35777,6 @@ GameObject:
   - component: {fileID: 1275908041}
   - component: {fileID: 1275908040}
   - component: {fileID: 1275908039}
-  - component: {fileID: 1275908038}
   - component: {fileID: 1275908037}
   - component: {fileID: 1275908036}
   m_Layer: 0
@@ -35908,21 +35827,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.057980686, y: 0.24638665, z: 0.92256856}
   m_Center: {x: 0.47236276, y: 0.07664928, z: -0.04085523}
---- !u!114 &1275908038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275908034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 770aee30421368f4899e57b35481b2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclosewindow: {fileID: 1275908039}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1275908039
 Animator:
   serializedVersion: 5
@@ -50673,7 +50577,6 @@ GameObject:
   - component: {fileID: 1793072612}
   - component: {fileID: 1793072611}
   - component: {fileID: 1793072610}
-  - component: {fileID: 1793072609}
   m_Layer: 0
   m_Name: Door.L.002
   m_TagString: Untagged
@@ -50696,21 +50599,6 @@ Transform:
   m_Father: {fileID: 820943092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1793072609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793072607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f1c4265d2e233469ca3a33b18036d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlipL: {fileID: 1793072610}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1793072610
 Animator:
   serializedVersion: 5
@@ -58010,7 +57898,6 @@ GameObject:
   - component: {fileID: 2134430398}
   - component: {fileID: 2134430397}
   - component: {fileID: 2134430396}
-  - component: {fileID: 2134430395}
   m_Layer: 0
   m_Name: ClosetDoor_Base
   m_TagString: Untagged
@@ -58034,21 +57921,6 @@ Transform:
   m_Father: {fileID: 1214663647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2134430395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134430393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Closetopenandclose: {fileID: 1214663648}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &2134430396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58274,7 +58146,6 @@ GameObject:
   - component: {fileID: 2136007986}
   - component: {fileID: 2136007985}
   - component: {fileID: 2136007984}
-  - component: {fileID: 2136007983}
   m_Layer: 0
   m_Name: ClosetDoor_Base
   m_TagString: Untagged
@@ -58298,21 +58169,6 @@ Transform:
   m_Father: {fileID: 864416240}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2136007983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136007981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Closetopenandclose: {fileID: 864416241}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &2136007984
 BoxCollider:
   m_ObjectHideFlags: 0
