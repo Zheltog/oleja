@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2129e5bf3cdfe0e4eba0063e7c053257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 7
+  sensitivity: 5
   minAngle: -60
   maxAngle: 60
 --- !u!1 &79575438
@@ -40634,8 +40634,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 035e42e9e026c8d47aaa9ce566a51981, type: 2}
+  m_sharedMaterial: {fileID: -4417423948658223507, guid: 035e42e9e026c8d47aaa9ce566a51981, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58826,7 +58826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  rotHorSen: 7
+  rotHorSen: 5
 --- !u!1001 &1858160391
 PrefabInstance:
   m_ObjectHideFlags: 0
