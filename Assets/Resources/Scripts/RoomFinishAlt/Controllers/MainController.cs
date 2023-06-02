@@ -5,7 +5,7 @@ namespace RoomFinishAlt
 {
     public class MainController: MonoBehaviour
     {
-        public string configFileName = "Json/roomfinishalt";
+        public string configFileName = "roomfinishalt";
 
         private void Awake()
         {

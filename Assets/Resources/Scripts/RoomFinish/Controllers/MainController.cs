@@ -6,7 +6,7 @@ namespace RoomFinish
 {
     public class MainController: MonoBehaviour
     {
-        public string configFileName = "Json/roomfinish";
+        public string configFileName = "roomfinish";
         public string standingUpAnimationName = "StopTyping";
         public Player player;
         public Animator mainAnimator;

@@ -37454,7 +37454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6d4923e49e4fc892e633550dd6480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configFileName: Json/roomfinish
+  configFileName: roomfinish
   standingUpAnimationName: StopTyping
   player: {fileID: 1855076791}
   mainAnimator: {fileID: 689608834}

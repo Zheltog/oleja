@@ -23220,7 +23220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1da3274c0e4091b4edaa538e1a519c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configFileName: Json/roomfinishalt
+  configFileName: roomfinishalt
 --- !u!114 &1150131579
 MonoBehaviour:
   m_ObjectHideFlags: 0

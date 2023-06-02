@@ -5,7 +5,7 @@ namespace Credits
 {
     public class MainController : MonoBehaviour
     {
-        public string configFileName = "Json/credits";
+        public string configFileName = "credits";
     
         private void Awake()
         {

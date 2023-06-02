@@ -6,7 +6,7 @@ namespace Garden
 {
     public class MainController: MonoBehaviour
     {
-        public string configFileName = "Json/garden";
+        public string configFileName = "garden";
         public string enteringAnimationName = "GardenEntering";
         public Animator mainAnimator;
         public GameObject mainPanel;

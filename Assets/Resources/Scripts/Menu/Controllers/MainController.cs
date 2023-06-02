@@ -5,13 +5,6 @@ namespace Menu
 {
     public class MainController : MonoBehaviour
     {
-        public string configFileName = "Json/menu";
-
-        private void Awake()
-        {
-            ConfigProvider<Config>.Init(configFileName);
-        }
-
         public void NewGame()
         {
             SceneLoader.LoadRoomStart();

@@ -5,7 +5,7 @@ namespace RoomStart
 {
     public class MainController: MonoBehaviour
     {
-        public string configFileName = "Json/roomstart";
+        public string configFileName = "roomstart";
     
         private void Awake()
         {
