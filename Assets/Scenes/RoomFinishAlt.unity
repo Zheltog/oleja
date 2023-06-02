@@ -1629,7 +1629,6 @@ GameObject:
   - component: {fileID: 88687755}
   - component: {fileID: 88687754}
   - component: {fileID: 88687753}
-  - component: {fileID: 88687752}
   m_Layer: 0
   m_Name: Door.L.001
   m_TagString: Untagged
@@ -1654,21 +1653,6 @@ Transform:
   m_Father: {fileID: 1817087535}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &88687752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88687750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclose: {fileID: 88687753}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &88687753
 Animator:
   serializedVersion: 5
@@ -5897,7 +5881,6 @@ GameObject:
   - component: {fileID: 293369925}
   - component: {fileID: 293369928}
   - component: {fileID: 293369927}
-  - component: {fileID: 293369926}
   m_Layer: 0
   m_Name: Drawer_Top
   m_TagString: Untagged
@@ -5921,21 +5904,6 @@ Transform:
   m_Father: {fileID: 1817087535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &293369926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293369924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 293369927}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &293369927
 Animator:
   serializedVersion: 5
@@ -6045,7 +6013,6 @@ GameObject:
   - component: {fileID: 294587434}
   - component: {fileID: 294587433}
   - component: {fileID: 294587432}
-  - component: {fileID: 294587431}
   m_Layer: 0
   m_Name: Door.R.001
   m_TagString: Untagged
@@ -6070,21 +6037,6 @@ Transform:
   m_Father: {fileID: 1817087535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294587431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294587429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclose1: {fileID: 294587432}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &294587432
 Animator:
   serializedVersion: 5
@@ -13919,7 +13871,6 @@ GameObject:
   - component: {fileID: 698562093}
   - component: {fileID: 698562092}
   - component: {fileID: 698562091}
-  - component: {fileID: 698562090}
   m_Layer: 0
   m_Name: Door.001
   m_TagString: Untagged
@@ -13943,21 +13894,6 @@ Transform:
   m_Father: {fileID: 1055138476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &698562090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698562088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclose: {fileID: 698562091}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &698562091
 Animator:
   serializedVersion: 5
@@ -17651,7 +17587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 877778074}
   - component: {fileID: 877778077}
-  - component: {fileID: 877778076}
   - component: {fileID: 877778075}
   m_Layer: 0
   m_Name: Drawer_R_01
@@ -17697,21 +17632,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &877778076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877778073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 877778075}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &877778077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19015,7 +18935,6 @@ GameObject:
   m_Component:
   - component: {fileID: 944371166}
   - component: {fileID: 944371169}
-  - component: {fileID: 944371168}
   - component: {fileID: 944371167}
   m_Layer: 0
   m_Name: Drawer
@@ -19061,21 +18980,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &944371168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944371165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 944371167}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &944371169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21183,7 +21087,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1076006565}
   - component: {fileID: 1076006568}
-  - component: {fileID: 1076006567}
   - component: {fileID: 1076006566}
   m_Layer: 0
   m_Name: Drawer
@@ -21229,21 +21132,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1076006567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076006564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 1076006566}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1076006568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25331,7 +25219,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1312051557}
   - component: {fileID: 1312051560}
-  - component: {fileID: 1312051559}
   - component: {fileID: 1312051558}
   m_Layer: 0
   m_Name: Drawer
@@ -25377,21 +25264,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1312051559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312051556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 1312051558}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1312051560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28845,7 +28717,6 @@ GameObject:
   - component: {fileID: 1459060819}
   - component: {fileID: 1459060822}
   - component: {fileID: 1459060821}
-  - component: {fileID: 1459060820}
   m_Layer: 0
   m_Name: Drawer_Bottom
   m_TagString: Untagged
@@ -28869,21 +28740,6 @@ Transform:
   m_Father: {fileID: 1817087535}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1459060820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459060818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 1459060821}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1459060821
 Animator:
   serializedVersion: 5
@@ -35194,7 +35050,6 @@ GameObject:
   - component: {fileID: 1815470649}
   - component: {fileID: 1815470648}
   - component: {fileID: 1815470647}
-  - component: {fileID: 1815470646}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -35218,21 +35073,6 @@ Transform:
   m_Father: {fileID: 763815084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1815470646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815470644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openandclose: {fileID: 1815470647}
-  open: 0
-  Player: {fileID: 0}
 --- !u!95 &1815470647
 Animator:
   serializedVersion: 5
@@ -38771,7 +38611,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1986428374}
   - component: {fileID: 1986428377}
-  - component: {fileID: 1986428376}
   - component: {fileID: 1986428375}
   m_Layer: 0
   m_Name: Drawer_R_02
@@ -38817,21 +38656,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1986428376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986428373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 1986428375}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &1986428377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40091,7 +39915,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2064917415}
   - component: {fileID: 2064917418}
-  - component: {fileID: 2064917417}
   - component: {fileID: 2064917416}
   m_Layer: 0
   m_Name: Drawer_L_01
@@ -40137,21 +39960,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2064917417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064917414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pull_01: {fileID: 2064917416}
-  open: 0
-  Player: {fileID: 0}
 --- !u!65 &2064917418
 BoxCollider:
   m_ObjectHideFlags: 0

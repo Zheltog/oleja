@@ -1,13 +1,13 @@
 {
   "tips": {
-    "closeReading": "[X] Закрыть",
+    "closeReading": "[X] TODO",
     "itemActionTips": [
       {
         "itemName": "FirstAid",
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "[E] Открыть аптечку",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -17,12 +17,12 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "Заперто",
+            "tip": "TODO",
             "priority": 1
           },
           {
             "itemPresent": "Bag",
-            "tip": "[E] Открыть шкаф",
+            "tip": "[E] TODO",
             "priority": 2
           }
         ]
@@ -32,7 +32,7 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "[E] Обокрасть",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -42,7 +42,7 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Nothing",
-            "tip": "[E] Прочитать",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -52,7 +52,7 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "[E] Взять лом",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -62,17 +62,17 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "Тут замок...",
+            "tip": "TODO...",
             "priority": 1
           },
           {
             "itemPresent": "Bag",
-            "tip": "Ключ не подходит...",
+            "tip": "TODO...",
             "priority": 2
           },
           {
             "itemPresent": "Crowbar",
-            "tip": "[E] Выломать замок",
+            "tip": "[E] TODO",
             "priority": 3
           }
         ]
@@ -82,7 +82,7 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "[E] Посмотреть студенческий билет",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -92,7 +92,7 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "[E] Посмотреть газеты",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -102,7 +102,7 @@
         "tipsForItemsPresent": [
           {
             "itemPresent": "Notebook",
-            "tip": "[E] Посмотреть телефон",
+            "tip": "[E] TODO",
             "priority": 1
           }
         ]
@@ -112,31 +112,31 @@
   "texts": [
     {
       "itemName": "Notebook",
-      "text": "ЗАБОРИ\n\nМ\nЕ\nН\nЯ\n\n\n\n\n\n(ОЛЕЖА)"
+      "text": "TODO"
     },
     {
       "itemName": "StudentID",
-      "text": "Студенческий билет.\n\nСушкин Олег Ильич.\n\nЮжно-Уральский политехнический колледж.\n\nФрезеровщик.\n\nНет отметки за последний курс.\n\nПросрочен."
+      "text": "TODO"
     },
     {
       "itemName": "Newspaper",
-      "text": "Несколько свежих газет.\n\nВ одной из них моё объявление с номером телефона."
+      "text": "TODO"
     },
     {
       "itemName": "Smartphone",
-      "text": "Смартфон с битым экраном.\n\nРазблокируется без ввода пароля.\n\nГалерея, насколько хватает глаз, заполнена в основном фотографиями с женщинами.\n\nВ мессенджерах тоже одни женщины.\n\nПоследние сообщения входящие, недельной давности, от некой Лили:\n\n\"Олеж привет\nзнаешь...\nу меня в голове все этот Патрик Суэйзи из фильма\nон такой...\nне знаю даже...\nкак объяснить\nя все думаю почему в реальности мужчины не такие...\nнеужели ты тоже не можешь быть таким?\""
+      "text": "TODO"
     },
     {
       "itemName": "CabinetLock",
-      "text": "Пистолет с одним патроном."
+      "text": "TODO"
     },
     {
       "itemName": "Bag",
-      "text": "Какой-то ключ."
+      "text": "TODO"
     },
     {
       "itemName": "FirstAid",
-      "text": "Аптечка. С успокоительным."
+      "text": "АTODO"
     }
   ]
 }
